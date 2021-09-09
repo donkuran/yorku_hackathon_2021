@@ -13,7 +13,8 @@ import LogOutButton from "../../shared/LogOutButton";
 import parseJwt from "../../../Helpers/authHelper";
 
 const SignUP = () => {
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   
@@ -33,7 +34,8 @@ const SignUP = () => {
     } else {
       alert(`Congrats! Submission submitted with id: ${payload.id}`);
     }
-    setName("");
+    setFirstName("");
+    setLastName("");
     setEmail("");
     setPassword("");
   };
