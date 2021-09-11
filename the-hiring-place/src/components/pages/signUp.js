@@ -8,9 +8,9 @@ import {
   Button,
   Container,
 } from "reactstrap";
-import BackButton from "../../shared/BackButton";
-import LogOutButton from "../../shared/LogOutButton";
-import parseJwt from "../../../Helpers/authHelper";
+// import BackButton from "../../shared/BackButton";
+// import LogOutButton from "../../shared/LogOutButton";
+// import parseJwt from "../../../Helpers/authHelper";
 
 const SignUP = () => {
   const [name, setName] = useState("");
