@@ -10,7 +10,9 @@ import {
   Card,
   CardBody,
   CardText,
+  FormText
 } from "reactstrap";
+import "bootstrap/dist/css/bootstrap.css";
 import { useHistory, useLocation } from "react-router-dom";
 
 const SignIn = () => {
@@ -48,8 +50,8 @@ const SignIn = () => {
 
   return (
     <Container>
-      
-    </Container>
+
+    </Container>  
   );
 };
 
