@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { Component } from 'react';
+import '../../css/signIn.css';
 import {
   Container,
   Col,
+  Row,
   Button,
   Form,
   FormGroup,
@@ -12,7 +15,10 @@ import {
   CardText,
   FormText
 } from "reactstrap";
-import "bootstrap/dist/css/bootstrap.css";
+import '../../App.css';
+// import "bootstrap/dist/css/bootstrap.css";
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import { useHistory, useLocation } from "react-router-dom";
 
 const SignIn = () => {
@@ -50,7 +56,49 @@ const SignIn = () => {
 
   return (
     <Container>
+        <div className="signIn-container">
+            <Row>
+                <h2>Sign In</h2>
+            </Row>  
+            <Form inline>
+              <Row>
+          
+                <Col md={3} sm={6} xs={6}>
+                  <FormGroup controlID="signID">
+                    <Label for="email">Email</Label>
+                    <Input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="E-mail address"
+                    />
+                  </FormGroup>
+                </Col>
+     
+              </Row>
 
+              <Row>
+        
+                <Col md={3} sm={6} xs={6}>
+                  <FormGroup controlID="signInpassword">
+                    <Label for="password">Password</Label>
+                   <Input
+                      type="password"
+                      name="password"
+                      id="password"
+                       placeholder="Password"
+                    />
+                  </FormGroup>
+                </Col>
+       
+              </Row>
+      
+             
+                <Button>Sign up</Button>
+             
+            
+            </Form>
+        </div>
     </Container>  
   );
 };

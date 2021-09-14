@@ -26,7 +26,7 @@ const SignUP = () => {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({ firstName, lastName, email, password }),
     });
     const payload = await response.json();
     if (response.status >= 400) {
