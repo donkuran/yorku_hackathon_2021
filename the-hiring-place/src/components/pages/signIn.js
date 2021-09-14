@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { Component } from 'react';
-import '../../css/signIn.css';
+// import { Component } from 'react';
+import logo from '../../logo.png';
+
+
 import {
   Container,
   Col,
@@ -16,6 +18,7 @@ import {
   FormText
 } from "reactstrap";
 import '../../App.css';
+import '../../css/signIn.css';
 // import "bootstrap/dist/css/bootstrap.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -55,51 +58,34 @@ const SignIn = () => {
   };
 
   return (
-    <Container>
-        <div className="signIn-container">
-            <Row>
-                <h2>Sign In</h2>
-            </Row>  
-            <Form inline>
-              <Row>
-          
-                <Col md={3} sm={6} xs={6}>
-                  <FormGroup controlID="signID">
-                    <Label for="email">Email</Label>
-                    <Input
-                      type="email"
-                      name="email"
-                      id="email"
-                      placeholder="E-mail address"
-                    />
-                  </FormGroup>
-                </Col>
-     
-              </Row>
-
-              <Row>
-        
-                <Col md={3} sm={6} xs={6}>
-                  <FormGroup controlID="signInpassword">
-                    <Label for="password">Password</Label>
-                   <Input
-                      type="password"
-                      name="password"
-                      id="password"
-                       placeholder="Password"
-                    />
-                  </FormGroup>
-                </Col>
-       
-              </Row>
-      
-             
-                <Button>Sign up</Button>
-             
-            
-            </Form>
+    <div className="signin-wrapper">
+        <div className="title-container">
+            <h1 className="title">Login</h1>
         </div>
-    </Container>  
+        <div className="loginGoogle-container">
+          <input id="loginGoogle" type="button" value="Login with Google" />
+        </div>          
+        <div className="loginLinkedIn-container">
+          <input id="loginlinkedIn" type="button" value="Login with LinkedIn " />
+        </div>
+
+        <form className="inputForm">
+            
+            <div className="user-container">
+                <input id="userName" type="text" placeholder="Email Address" required />
+            </div> 
+            <div className="pw-container">
+                <input id="password" type="Password" placeholder="Password" required />
+            </div> 
+            <input id="login" type="button" onclick="validateUser()" value="Login" />
+            <a id="forgotPassword" href="#">Forgot Password?</a> <br/> <br/>          
+       </form>
+
+        <a id="needAccount" href="#">Need an account?</a>
+        <a id="signUp" href="#">Sign Up</a>
+        <br/>
+        <br/>
+    </div>
   );
 };
 
