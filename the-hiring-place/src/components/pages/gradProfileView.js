@@ -11,8 +11,7 @@ const GradProfileView = () => {
       <div className="gradProfile-wrapper">
 
           <div className="myheader">
-              <h1>My Website</h1>
-              <p>Resize the browser window to see the effect.</p>
+              <h1>Header to be added here</h1>
           </div>
 
           <div className="topnav">
@@ -58,7 +57,11 @@ const GradProfileView = () => {
                   </div>
               </div>
           </div>
-        </div>   
+        </div>  
+
+        <div class="footer">
+            <h2>Footer to be added here</h2>
+        </div>
     </Container>
   );
 };
