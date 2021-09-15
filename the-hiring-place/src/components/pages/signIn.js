@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+// import { Component } from 'react';
+import logo from '../../logo.png';
+
+
 import {
   Container,
   Col,
+  Row,
   Button,
   Form,
   FormGroup,
@@ -12,7 +17,11 @@ import {
   CardText,
   FormText
 } from "reactstrap";
-import "bootstrap/dist/css/bootstrap.css";
+import '../../App.css';
+import '../../css/signIn.css';
+// import "bootstrap/dist/css/bootstrap.css";
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import { useHistory, useLocation } from "react-router-dom";
 
 const SignIn = () => {
@@ -49,9 +58,34 @@ const SignIn = () => {
   };
 
   return (
-    <Container>
+    <div className="signin-wrapper">
+        <div className="title-container">
+            <h1 className="title">Login</h1>
+        </div>
+        <div className="loginGoogle-container">
+          <input id="loginGoogle" type="button" value="Login with Google" />
+        </div>          
+        <div className="loginLinkedIn-container">
+          <input id="loginlinkedIn" type="button" value="Login with LinkedIn " />
+        </div>
 
-    </Container>  
+        <form className="inputForm">
+            
+            <div className="user-container">
+                <input id="userName" type="text" placeholder="Email Address" required />
+            </div> 
+            <div className="pw-container">
+                <input id="password" type="Password" placeholder="Password" required />
+            </div> 
+            <input id="login" type="button" onclick="validateUser()" value="Login" />
+            <a id="forgotPassword" href="#">Forgot Password?</a> <br/> <br/>          
+       </form>
+
+        <a id="needAccount" href="#">Need an account?</a>
+        <a id="signUp" href="#">Sign Up</a>
+        <br/>
+        <br/>
+    </div>
   );
 };
 
