@@ -25,9 +25,13 @@ const GradProfileView = () => {
           <div className="topnav">
             <a href="#">Profile</a>
             <a href="#">Work Preference</a>
-            <a href="#" style={{float:"right"}}>View</a>
+            {/* <a href="#" style={{float:"right"}}>View</a>
             <a href="#" style={{float:"right"}}>Edit</a>
-            <a href="#" style={{float:"right"}}>Save</a>
+            <a href="#" style={{float:"right"}}>Save</a> */}
+             
+            <input id="view" type="button" style={{float:"right"}} onclick="viewGradProfile()" value="View" />
+            <input id="edit" type="button" style={{float:"right"}} onclick="editGradProfile()" value="Edit" />
+            <input id="save" type="button" style={{float:"right"}} onclick="saveGradProfile()" value="Save" />
           </div>
 
           <div className="row">
