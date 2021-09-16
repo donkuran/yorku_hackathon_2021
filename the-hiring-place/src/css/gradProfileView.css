@@ -35,7 +35,10 @@ body, html {
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color:white;
+  border-bottom: solid 1px black;
+  border-top: solid 1px black;
+  height: 45px;
 }
 
 /* Style the topnav links */
@@ -44,16 +47,41 @@ body, html {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 3px 16px;
   text-decoration: none;
 }
 
+#profile {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  /* or 150% */
+  letter-spacing: -0.015em;
+  color: #3AC2EF;
+
+}
+
+#workPreference {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  /* or 150% */
+  letter-spacing: -0.015em;
+  color: black;
+}
+
 #save, #edit, #view {
-  margin-top: 13px;
+  margin-top: 11px;
   margin-right: 15px;
   width: 70px;
 
   background: #3AC2EF;
+  /* border-color: #3AC2EF; */
+  border: hidden;
   border-radius: 6px;
   font-family: Lato;
   font-style: normal;
@@ -334,6 +362,7 @@ label {
   margin-top: 99px;
   background: #3AC2EF;
   border-radius: 6px;
+  border: hidden;
 
   font-family: Lato;
   font-style: normal;

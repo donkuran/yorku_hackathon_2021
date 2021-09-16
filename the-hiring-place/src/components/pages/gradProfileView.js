@@ -23,8 +23,8 @@ const GradProfileView = () => {
         </div>
         <form>
           <div className="topnav">
-            <a href="#">Profile</a>
-            <a href="#">Work Preference</a>
+            <a id="profile" href="#">Profile</a>
+            <a id="workPreference" href="#">Work Preference</a>
             {/* <a href="#" style={{float:"right"}}>View</a>
             <a href="#" style={{float:"right"}}>Edit</a>
             <a href="#" style={{float:"right"}}>Save</a> */}
