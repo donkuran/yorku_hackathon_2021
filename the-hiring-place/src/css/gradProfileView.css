@@ -157,7 +157,7 @@ label {
 }
 
 #name, #pronouns, #roleTitle, #program, #graduationYear, #location, #country, #aboutMeDescription, #programCourse, 
-#startDate, #endDate {
+#startDate, #endDate, #enterSkills {
   border-style: solid;
   border-width: 1px;
   font-size: 15px;
@@ -172,7 +172,7 @@ label {
 }
 
 /* Half-length input text */
-#pronouns, #roleTitle, #graduationYear, #location, #country, #startDate, #endDate  {
+#pronouns, #roleTitle, #graduationYear, #location, #country, #enterSkills {
   width: 45%;
 }
 
@@ -185,6 +185,18 @@ label {
   font-family: Lato;
   letter-spacing: -1.5%;
   margin-top: 10px;
+  /* margin-bottom: 0%; */
+}
+
+#dummyContainer {
+  margin-top: 10px;
+  height: 30px;
+  visibility: hidden;
+  cursor: hidden;
+}
+
+#linkedIn {
+  margin-top: 20px;
 }
 
 #startDate {
@@ -275,6 +287,44 @@ label {
   border-color: black;
 }
 
+.techSkills-container {
+  margin-top: 20px;
+  width: 100%;
+  /* height: auto; */
+  height: 50px; /* added to see the actual position; should be changed to auto when code is added */
+  /* border-style: solid;
+  border-color: black;
+  border-width: 1px; */
+}
+
+#enterSkills {
+  
+  margin-top: 10px;
+}
+
+#addTechSkills {
+  position: absolute;
+  width: 30%;
+  /* padding: 60px, 60px; */
+  margin-left: 200px;
+  margin-top: 99px;
+  background: #3AC2EF;
+  border-radius: 6px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height */
+  /* display: flex; */
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #FFFFFF;
+
+}
 
 /* Clear floats after the columns */
 .row:after {

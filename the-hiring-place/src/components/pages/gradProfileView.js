@@ -69,10 +69,11 @@ const GradProfileView = () => {
                   </div>
                   <div className="card">
                        <div className="cardTitle">Links</div>
-                       <input id="linkedIn" type="text" placeholder="LinkedIn" required />
-                       <input id="websitePortfolio" type="text" placeholder="Website Or Portfolio" required />
-                       <input id="twitter" type="text" placeholder="Twitter" required />
-                       <input id="instagram" type="text" placeholder="Instagram" required />
+                       <input id="linkedIn" type="text" placeholder="LinkedIn" />
+                       <input id="websitePortfolio" type="text" placeholder="Website Or Portfolio" />
+                       <input id="twitter" type="text" placeholder="Twitter" />
+                       <input id="instagram" type="text" placeholder="Instagram" />
+                       <input id="dummyContainer" type="text" />
                   </div>
             </div>
 
@@ -108,8 +109,12 @@ const GradProfileView = () => {
                   </div>
 
                   <div className="card">
-                    <h3>Follow Me</h3>
-                    <p>Some text..</p>
+                    <div className="cardTitle">Technical Skills</div>
+                    <div className="techSkills-container"></div>
+                    <input id="enterSkills" type="text" placeholder="Enter Skills" required />
+                    <input id="addTechSkills" type="button" onclick="addTechSkills()" value="Add" />
+
+                  
                   </div>
               </div>
           </div>
