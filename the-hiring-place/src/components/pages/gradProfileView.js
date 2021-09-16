@@ -1,6 +1,6 @@
 /* URL: http://localhost:3000/gradProfileView */
 import React, { useEffect, useState } from "react";
-import { Row, Col, Button, Container } from "reactstrap";
+import { Row, Col, Button, Container, FormGroup } from "reactstrap";
 import '../../css/gradProfileView.css';
 import profilePhoto from '../../images/profile2.png';
 
@@ -26,34 +26,43 @@ const GradProfileView = () => {
           <div className="row">
               <div className="leftcolumn">
                   <div className="card">
-                        <div className="profilePicture">
-                            <img src={ profilePhoto } alt="profilePhoto"/>   
+                    
+                        <div className="profilePicture-container">
+                            <img className="profilePhoto" src={ profilePhoto } alt="profilePhoto"/>   
                         </div>
-                        <label className="name">Name</label>
-                        <input id="name" type="text" placeholder="Name" />
-              
-                        <label className="pronouns">Pronouns</label>
-                        <input id="pronouns" type="text" placeholder="Pronouns" />
+                        <div className="profile-detail-container">
+                            <label className="label">Name</label> <br />
+                            <input id="name" className="input-text" type="text" placeholder="Name" />  <br />
 
-                        <label className="roleTitle">Role/Title</label>
-                        <input id="roleTitle" type="text" placeholder="Role/Title" />
+                            <label className="label">Pronouns</label>
+                            <label className="label" style={{padding: "0px 89px"}}>Role/Title</label> <br />
+                            
+                            <input id="pronouns" className="input-text" type="text" placeholder="Pronouns" />
+                            <input id="roleTitle" 
+                                  className="input-text" 
+                                  style={{margin: "0px 14px"}} 
+                                  ype="text" placeholder="Role/Title" 
+                            />
+                            <label className="label">Program</label> <br />
+                            <input id="program" className="input-text" type="text" placeholder="Program" />  <br />
+                            
+                            <label className="label">Graduation Year (Or Expected)</label> <br />
+                            <input id="graduationYear" className="input-text" type="text" placeholder="YYYY" />
 
-                        <label className="program">Program</label>
-                        <input id="program" type="text" placeholder="Program" />
+                            <label className="label">Location</label>
+                            <input id="location" className="input-text" type="text" placeholder="City, Province" />
 
-                        <label className="graduationYear">Program</label>
-                        <input id="graduationYear" type="text" placeholder="YYYY" />
 
-                        <label className="location">Location</label>
-                        <label className="cityAndProvince">City, Province</label>
+                            <label className="cityAndProvince">City, Province</label>
 
+                                   {/* 
                         <label for="country">Country</label>
                         <select id="country" name="country">        
                           <option value="canada">Canada</option>
                           <option value="usa">USA</option>
-                        </select>
+                        </select> */}
 
-
+                        </div>
                   </div>
                   <div className="card">
                         <h2>TITLE HEADING</h2>

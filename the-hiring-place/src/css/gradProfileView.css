@@ -1,6 +1,6 @@
-/* * {
+* {
   box-sizing: border-box;
-} */
+}
 
 body, html {
   font-family: Arial;
@@ -48,6 +48,7 @@ body, html {
 .leftcolumn {   
   float: left;
   width: 50%;
+  height: auto;
 }
 
 /* Add a card effect for articles */
@@ -57,7 +58,9 @@ body, html {
 
   background: #E1DFDC;
   border: 1px solid rgba(0, 0, 0, 0.5);
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
+
+  /* height: auto; */
 }
 
 .cardTitle {
@@ -72,33 +75,103 @@ body, html {
 }
 
 
-/* Fake image */
-.profilePicture {
-  background-color: #aaa;
-  width: 45%;
+
+.profilePicture-container {
+  position: absolute;
+  float: left;
+  width: 33%;
   height: auto;
-  padding: 20px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
 }
 
-.profilePicture img {
+.profilePicture-container img {
+  position: relative;
   width: 100%;
   height: auto;
   border-radius: 50%;
 }
 
-
-.name {
-  position: relative;
+/* .profilePhoto {
   float: left;
   width: 45%;
+  height: auto;
+  border-radius: 50%;
+
+} */
+
+.profile-detail-container {
+  /* position: absolute; */
+
+  position: relative;
+  float: right;
+  margin-right: 5px;
+  margin-left: 45%;
+
+
+  /* margin-left: 203px; */
+  width: 55%;
+  height: auto;
+
   border-style: solid;
-  
+
 }
+
+/* .name-group {
+  float: left;
+
+} */
+
+
+
 
 /* .aboutMeDesc-container {
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
+} */
+
+
+label {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  /* display: flex; */
+  /* align-items: center; */
+  letter-spacing: -0.015em; 
+  color: #000000; 
+  
+  
+}
+
+
+#name, #pronouns, #roleTitle, #program, #graduationYear, #location {
+  border-style: solid;
+  border-width: 1px;
+  font-size: 15px;
+  font-style: normal;
+  font-family: Lato;
+  letter-spacing: -1.5%;
+}
+
+/* Full-length input text */
+#name, #program, #location {
+  width: 90%;
+}
+
+/* Half-length input text */
+#pronouns, #roleTitle, #graduationYear  {
+  width: 45%;
+}
+
+
+
+
+/* .pronouns-group {
+  width: 500px;
 } */
 
 #aboutMeDescription {
