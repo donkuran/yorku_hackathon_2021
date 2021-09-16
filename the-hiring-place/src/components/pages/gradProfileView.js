@@ -42,7 +42,7 @@ const GradProfileView = () => {
                             <input id="name" className="input-text" type="text" placeholder="Name" />  <br />
 
                             <label className="label">Pronouns</label>
-                            <label className="label" style={{padding: "0px 110px"}}>Role/Title</label> <br />
+                            <label className="roleTitle-label">Role/Title</label> <br />
                             
                             <input id="pronouns" className="input-text" type="text" placeholder="Pronouns" />
                             <input id="roleTitle" 
@@ -91,11 +91,22 @@ const GradProfileView = () => {
                     </div>
                   </div>
                   <div className="card">
-                    <div className="cardTitle">About Me</div>
-                    <div className="fakeimg"><p>Image</p></div>
-                    <div className="fakeimg"><p>Image</p></div>
-                    <div className="fakeimg"><p>Image</p></div>
+                       <div className="cardTitle">Education</div>
+                       <input id="programCourse" type="text" placeholder="Program / Course" required />
+
+                       <label className="startDate-label">Start Date</label>
+                       <label className="endDate-label">End Date</label>
+                            
+                        <input id="startDate" className="input-text" type="text" placeholder="MM / YYYY" />
+                        <input id="endDate" className="input-text" type="text" placeholder="MM / YYYY" />
+                        {/* <input id="roleTitle" 
+                                  className="input-text" 
+                                  style={{margin: "0px 14px"}} 
+                                  ype="text" placeholder="Role/Title" 
+                        /> */}
+                         
                   </div>
+
                   <div className="card">
                     <h3>Follow Me</h3>
                     <p>Some text..</p>

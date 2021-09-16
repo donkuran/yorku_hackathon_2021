@@ -131,7 +131,33 @@ label {
   margin-top: 15px;
 }
 
-#name, #pronouns, #roleTitle, #program, #graduationYear, #location, #country, #aboutMeDescription {
+.roleTitle-label {
+  margin-left: 106px;
+}
+
+.startDate-label {
+
+  height: auto;
+  /* position: absolute; */
+  width: 45%;
+  float: left;
+  /* border-style: solid; */
+
+}
+
+.endDate-label {
+
+  position: absolute;
+  float: left;
+  /* border-style: solid; */
+  width: 45%;
+  height: auto;
+  margin: 77px 200px;
+
+}
+
+#name, #pronouns, #roleTitle, #program, #graduationYear, #location, #country, #aboutMeDescription, #programCourse, 
+#startDate, #endDate {
   border-style: solid;
   border-width: 1px;
   font-size: 15px;
@@ -146,7 +172,7 @@ label {
 }
 
 /* Half-length input text */
-#pronouns, #roleTitle, #graduationYear, #location, #country  {
+#pronouns, #roleTitle, #graduationYear, #location, #country, #startDate, #endDate  {
   width: 45%;
 }
 
@@ -159,6 +185,25 @@ label {
   font-family: Lato;
   letter-spacing: -1.5%;
   margin-top: 10px;
+}
+
+#startDate {
+  margin-top: 5px;
+  /* border-style: solid; */
+  width: 30%;
+}
+
+#endDate {
+  position: absolute;
+  /* border-style: solid; */
+
+  /* position: absolute; */
+  float: left;
+  /* border-style: solid; */
+  /* width: 45%; */
+  height: auto;
+  margin: 101px 200px;
+  width: 30%;
 }
 
 .cardTitle-aboutMe {
@@ -219,6 +264,15 @@ label {
   line-height: 24px;
   letter-spacing: -0.015em;
   color: rgba(0, 0, 0, 0.8);
+}
+
+#programCourse {
+  margin-top: 20px;
+}
+
+#startDate, #endDate {
+  border-style: solid;
+  border-color: black;
 }
 
 
