@@ -3,9 +3,18 @@ import React, { useEffect, useState } from "react";
 import { Row, Col, Button, Container, FormGroup } from "reactstrap";
 import '../../css/gradProfileView.css';
 import profilePhoto from '../../images/profile2.png';
+import tooltip from '../../images/tooltip.png';
+
 
 const GradProfileView = () => {
+
+  const images = [profilePhoto, tooltip];
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  
   return (
+
+
     // <Container>
   
       <div className="gradProfile-wrapper">
@@ -64,23 +73,22 @@ const GradProfileView = () => {
                        <input id="websitePortfolio" type="text" placeholder="Website Or Portfolio" required />
                        <input id="twitter" type="text" placeholder="Twitter" required />
                        <input id="instagram" type="text" placeholder="Instagram" required />
-
-                        {/* <h2>TdfadsfadsfdsfEADING</h2>
-                        <h5>Title description, Sep 2, 2017</h5>
-                        <div className="fakeimg" style={{height:"200px"}}>Image</div>
-                        <p>Some text..</p>
-                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> */}
-
-
                   </div>
             </div>
 
             <div className="rightcolumn">
                   <div className="card">
-                    <div className="cardTitle">About Me</div>
-                    {/* <div className="aboutMeDesc-container"> */}
-                         <input id="aboutMeDescription" type="text" placeholder="Description" required />
-                    {/* </div> */}
+                    <div className="cardTitle-aboutMe">About Me</div>
+
+                  {/*  aboutMe-tooltip-content="Tooltip: Remember this is an opportunity to tell recruiters about why you
+                                    would be a great addition to a team/company" */}
+                    <div className="aboutMe-tooltip-container" >
+                           <img className="aboutMe-tooltip" src={ tooltip } alt="tooltip image"/>   
+                    </div>   
+
+                    <div className="aboutMeDesc-container">
+                         <textarea id="aboutMeDescription" type="text" placeholder="Description" required />
+                    </div>
                   </div>
                   <div className="card">
                     <div className="cardTitle">About Me</div>

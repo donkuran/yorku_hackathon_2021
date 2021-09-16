@@ -84,6 +84,7 @@ body, html {
 }
 
 .cardTitle {
+  position: relative;
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -130,7 +131,7 @@ label {
   margin-top: 15px;
 }
 
-#name, #pronouns, #roleTitle, #program, #graduationYear, #location, #country, {
+#name, #pronouns, #roleTitle, #program, #graduationYear, #location, #country, #aboutMeDescription {
   border-style: solid;
   border-width: 1px;
   font-size: 15px;
@@ -160,6 +161,56 @@ label {
   margin-top: 10px;
 }
 
+.cardTitle-aboutMe {
+  position: absolute;
+  margin-top: 0%;
+  float: left;
+  width: 15%;
+  height: auto;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.015em;
+  color: #000000;
+}
+
+
+/* tooltip */
+.aboutMe-tooltip-container {
+  position: relative;
+  float: left;
+  margin-left: 70px;
+  width: 3%;
+  line-height: 18px;
+}
+
+.aboutMe-tooltip-container .aboutMe-tooltip {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.aboutMeDesc-container {
+  margin-top: 20px;
+  width: 100%;
+  height: 150px;
+
+}
+
+#aboutMeDescription {
+  width: 100%;
+  height: 150px;
+  margin-top: 0%;
+  text-align:start;
+}
+
+.aboutMe-tooltip:hover::after {
+  content: attr(aboutMe-tooltip-content);
+}
+
 #aboutMeDescription {
   font-family: Lato;
   font-style: normal;
@@ -169,6 +220,7 @@ label {
   letter-spacing: -0.015em;
   color: rgba(0, 0, 0, 0.8);
 }
+
 
 /* Clear floats after the columns */
 .row:after {
