@@ -6,15 +6,13 @@ import profilePhoto from '../../images/profile2.png';
 
 const GradProfileView = () => {
   return (
-    <Container>
+    // <Container>
   
       <div className="gradProfile-wrapper">
+        <div className="myheader">
+            <h1>Header to be added here</h1>
+        </div>
         <form>
-
-          <div className="myheader">
-              <h1>Header to be added here</h1>
-          </div>
-
           <div className="topnav">
             <a href="#">Profile</a>
             <a href="#">Work Preference</a>
@@ -35,7 +33,7 @@ const GradProfileView = () => {
                             <input id="name" className="input-text" type="text" placeholder="Name" />  <br />
 
                             <label className="label">Pronouns</label>
-                            <label className="label" style={{padding: "0px 89px"}}>Role/Title</label> <br />
+                            <label className="label" style={{padding: "0px 110px"}}>Role/Title</label> <br />
                             
                             <input id="pronouns" className="input-text" type="text" placeholder="Pronouns" />
                             <input id="roleTitle" 
@@ -46,21 +44,17 @@ const GradProfileView = () => {
                             <label className="label">Program</label> <br />
                             <input id="program" className="input-text" type="text" placeholder="Program" />  <br />
                             
-                            <label className="label">Graduation Year (Or Expected)</label> <br />
-                            <input id="graduationYear" className="input-text" type="text" placeholder="YYYY" />
+                            <label className="label">Graduation Year (Or Expected)</label>
+                            <input id="graduationYear" className="input-text" type="text" placeholder="YYYY" /> <br />
 
-                            <label className="label">Location</label>
+                            <label className="label">Location</label> <br />
                             <input id="location" className="input-text" type="text" placeholder="City, Province" />
-
-
-                            <label className="cityAndProvince">City, Province</label>
-
-                                   {/* 
-                        <label for="country">Country</label>
-                        <select id="country" name="country">        
-                          <option value="canada">Canada</option>
-                          <option value="usa">USA</option>
-                        </select> */}
+                                   
+                            {/* <label for="country">Country</label> */}
+                            <select id="country" name="country" style={{margin: "0px 10px"}}>        
+                              <option value="canada">Canada</option>
+                              <option value="usa">USA</option>
+                            </select>
 
                         </div>
                   </div>
@@ -103,7 +97,7 @@ const GradProfileView = () => {
         </div>  
 
 
-    </Container>
+    // </Container>
   );
 };
 

@@ -1,16 +1,27 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* setiings WITHOUT <Container> component */
 body, html {
-  font-family: Arial;
-  padding: 10px;
-  /* background: #f1f1f1; */
   background-color: white;
   overflow: scroll;
+  /* align-items: center; */
+  /* align-content: center; */
 }
 
-/* Header/Blog Title */
+/* setiings WITH <Container> component */
+/* body, html {
+  font-family: Arial;
+  padding: 5px;
+  background-color: white;
+  overflow: scroll;
+} */
+
+
+
 .header {
   padding: 30px;
   text-align: center;
@@ -43,6 +54,11 @@ body, html {
   color: black;
 }
 
+.row {
+  /* margin: auto; */
+  margin-left: 5%;
+}
+
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {   
@@ -51,16 +67,20 @@ body, html {
   height: auto;
 }
 
-/* Add a card effect for articles */
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 45%;
+  /* background-color: #f1f1f1; */
+  padding-left: 55px;
+}
+
+/* Add card */
 .card {
   padding: 25px;
   margin-top: 20px;
-
   background: #E1DFDC;
   border: 1px solid rgba(0, 0, 0, 0.5);
-  /* box-sizing: border-box; */
-
-  /* height: auto; */
 }
 
 .cardTitle {
@@ -69,69 +89,34 @@ body, html {
   font-weight: bold;
   font-size: 15px;
   line-height: 18px;
-  /* align-items: center; */
   letter-spacing: -0.015em;
   color: #000000;
 }
 
-
-
 .profilePicture-container {
   position: absolute;
+  margin-top: 0%;
   float: left;
-  width: 33%;
+  width: 30%;
   height: auto;
-  border-style: solid;
-  border-color: black;
-  border-width: 1px;
 }
 
 .profilePicture-container img {
   position: relative;
+  /* margin-top: 0%; */
   width: 100%;
   height: auto;
   border-radius: 50%;
 }
 
-/* .profilePhoto {
-  float: left;
-  width: 45%;
-  height: auto;
-  border-radius: 50%;
-
-} */
-
 .profile-detail-container {
-  /* position: absolute; */
-
   position: relative;
   float: right;
-  margin-right: 5px;
-  margin-left: 45%;
-
-
-  /* margin-left: 203px; */
-  width: 55%;
+  /* margin-right: 5px; */
+  margin-left: 40%;
+  width: 60%;
   height: auto;
-
-  border-style: solid;
-
 }
-
-/* .name-group {
-  float: left;
-
-} */
-
-
-
-
-/* .aboutMeDesc-container {
-  background: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  box-sizing: border-box;
-} */
-
 
 label {
   font-family: Montserrat;
@@ -139,16 +124,12 @@ label {
   font-weight: 600;
   font-size: 15px;
   line-height: 18px;
-  /* display: flex; */
-  /* align-items: center; */
   letter-spacing: -0.015em; 
-  color: #000000; 
-  
-  
+  color: #000000;  
+  margin-top: 15px;
 }
 
-
-#name, #pronouns, #roleTitle, #program, #graduationYear, #location {
+#name, #pronouns, #roleTitle, #program, #graduationYear, #location, #country {
   border-style: solid;
   border-width: 1px;
   font-size: 15px;
@@ -158,21 +139,15 @@ label {
 }
 
 /* Full-length input text */
-#name, #program, #location {
+#name, #program {
   width: 90%;
 }
 
 /* Half-length input text */
-#pronouns, #roleTitle, #graduationYear  {
+#pronouns, #roleTitle, #graduationYear, #location, #country  {
   width: 45%;
 }
 
-
-
-
-/* .pronouns-group {
-  width: 500px;
-} */
 
 #aboutMeDescription {
   font-family: Lato;
@@ -180,17 +155,8 @@ label {
   font-weight: normal;
   font-size: 15px;
   line-height: 24px;
-  /* or 160% */
   letter-spacing: -0.015em;
   color: rgba(0, 0, 0, 0.8);
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 45%;
-  /* background-color: #f1f1f1; */
-  padding-left: 55px;
 }
 
 /* Clear floats after the columns */
