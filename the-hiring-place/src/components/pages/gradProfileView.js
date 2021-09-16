@@ -2,33 +2,58 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Button, Container } from "reactstrap";
 import '../../css/gradProfileView.css';
-import profilePic from '../../images/profile2.png';
+import profilePhoto from '../../images/profile2.png';
 
 const GradProfileView = () => {
   return (
     <Container>
- 
+  
       <div className="gradProfile-wrapper">
+        <form>
 
           <div className="myheader">
               <h1>Header to be added here</h1>
           </div>
 
           <div className="topnav">
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-            <a href="#" style={{float:"right"}}>Link</a>
+            <a href="#">Profile</a>
+            <a href="#">Work Preference</a>
+            <a href="#" style={{float:"right"}}>View</a>
+            <a href="#" style={{float:"right"}}>Edit</a>
+            <a href="#" style={{float:"right"}}>Save</a>
           </div>
 
           <div className="row">
               <div className="leftcolumn">
                   <div className="card">
-                        <h2>TITLE HEADING</h2>
-                        <h5>Title description, Dec 7, 2017</h5>
-                        <div className="fakeimg" style={{height:"200px"}}>Image</div>
-                        <p>Some text..</p>
-                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                        <div className="profilePicture">
+                            <img src={ profilePhoto } alt="profilePhoto"/>   
+                        </div>
+                        <label className="name">Name</label>
+                        <input id="name" type="text" placeholder="Name" />
+              
+                        <label className="pronouns">Pronouns</label>
+                        <input id="pronouns" type="text" placeholder="Pronouns" />
+
+                        <label className="roleTitle">Role/Title</label>
+                        <input id="roleTitle" type="text" placeholder="Role/Title" />
+
+                        <label className="program">Program</label>
+                        <input id="program" type="text" placeholder="Program" />
+
+                        <label className="graduationYear">Program</label>
+                        <input id="graduationYear" type="text" placeholder="YYYY" />
+
+                        <label className="location">Location</label>
+                        <label className="cityAndProvince">City, Province</label>
+
+                        <label for="country">Country</label>
+                        <select id="country" name="country">        
+                          <option value="canada">Canada</option>
+                          <option value="usa">USA</option>
+                        </select>
+
+
                   </div>
                   <div className="card">
                         <h2>TITLE HEADING</h2>
@@ -39,29 +64,36 @@ const GradProfileView = () => {
                   </div>
             </div>
 
-            <div class="rightcolumn">
-                  <div class="card">
-                    <h2>About Me</h2>
-                    <div class="fakeimg" style={{height:"100px"}}>Image</div>
-                    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+            <div className="rightcolumn">
+                  <div className="card">
+                    <div className="cardTitle">About Me</div>
+                    {/* <div className="aboutMeDesc-container"> */}
+                         <input id="aboutMeDescription" type="text" placeholder="Description" required />
+                    {/* </div> */}
                   </div>
-                  <div class="card">
-                    <h3>Popular Post</h3>
-                    <div class="fakeimg"><p>Image</p></div>
-                    <div class="fakeimg"><p>Image</p></div>
-                    <div class="fakeimg"><p>Image</p></div>
+                  <div className="card">
+                    <div className="cardTitle">About Me</div>
+                    <div className="fakeimg"><p>Image</p></div>
+                    <div className="fakeimg"><p>Image</p></div>
+                    <div className="fakeimg"><p>Image</p></div>
                   </div>
-                  <div class="card">
+                  <div className="card">
                     <h3>Follow Me</h3>
                     <p>Some text..</p>
                   </div>
               </div>
           </div>
+
+        </form>
+
+          <div class="footer">
+            <h2>Footer to be added here</h2>
+          </div>
+
+
         </div>  
 
-        <div class="footer">
-            <h2>Footer to be added here</h2>
-        </div>
+
     </Container>
   );
 };
