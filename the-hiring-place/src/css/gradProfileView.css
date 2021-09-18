@@ -5,28 +5,26 @@
 }
 
 /* setiings WITHOUT <Container> component */
-body, html {
-  background-color: white;
-  overflow: scroll;
-  /* align-items: center; */
-  /* align-content: center; */
-}
-
-/* setiings WITH <Container> component */
 /* body, html {
-  font-family: Arial;
-  padding: 5px;
   background-color: white;
   overflow: scroll;
 } */
 
+/* setiings WITH <Container> component */
+body, html {
+  /* font-family: Arial; */
+  /* padding: 5px; */
+  background-color: white;
+  overflow: scroll;
+}
 
 
-.header {
+
+/* .header {
   padding: 30px;
   text-align: center;
   background: white;
-}
+} */
 
 .header h1 {
   font-size: 50px;
@@ -105,28 +103,28 @@ body, html {
 
 .row {
   /* margin: auto; */
-  margin-left: 5%;
+  /* margin-left: 5%; */
 }
 
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {   
   float: left;
-  width: 50%;
+  width: 60%;
   height: auto;
 }
 
 /* Right column */
 .rightcolumn {
   float: left;
-  width: 45%;
+  width: 40%;
   /* background-color: #f1f1f1; */
-  padding-left: 55px;
+  padding-left: 30px;
 }
 
 /* Add card */
 .card {
-  padding: 25px;
+  padding: 15px;
   margin-top: 20px;
   background: #E1DFDC;
   border: 1px solid rgba(0, 0, 0, 0.5);
@@ -242,7 +240,7 @@ label {
 
 #dummyContainer {
   margin-top: 10px;
-  height: 30px;
+  height: 15px;
   visibility: hidden;
   cursor: hidden;
 }
@@ -274,7 +272,7 @@ label {
   position: absolute;
   margin-top: 0%;
   float: left;
-  width: 15%;
+  width: 25%;
   height: auto;
 
   font-family: Montserrat;
@@ -386,13 +384,124 @@ label {
   clear: both;
 }
 
+
 /* Footer */
 .footer {
+  position: relative;
   padding: 20px;
+  margin-top: 20px;
+  height: auto;
+  overflow: hidden;
   text-align: center;
   background: #ddd;
-  margin-top: 20px;
+
+
+  align-content: center;
 }
+
+.yoh1 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #000000;
+}
+
+.yoh2 {
+font-family: Lato;
+font-style: normal;
+font-weight: 900;
+font-size: 16px;
+/* line-height: 19px; */
+/* display: flex; */
+align-items: center;
+text-align: center;
+letter-spacing: 0.045em;
+color: #686260;
+
+}
+
+.privacy-policy {
+  float: right;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+  /* display: flex; */
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  /* YOH-DrkBlue */
+  color: #3AC2EF;
+
+}
+
+#contact {
+  /* float: none; */
+  background: #3AC2EF;
+  border-radius: 4.11712px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 10.2928px;
+  font-size: 10px;
+  line-height: 12px;
+  /* display: flex; */
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.005em;
+
+  color: #FFFFFF;
+  width: 8rem;
+  /* margin-left: 10%; */
+  margin-top: -15;
+
+
+}
+
+.terms-and-conditions {
+  float: right;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  /* display: flex; */
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+
+  color: #3AC2EF;
+  /* width: 15px; */
+  /* margin-right: 5%; */
+  
+
+
+}
+
+.copyright {
+  float: left;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 7px;
+  /* identical to box height, or 55% */
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #000000;
+
+
+}
+
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
