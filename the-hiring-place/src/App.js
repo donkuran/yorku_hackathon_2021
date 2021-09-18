@@ -13,6 +13,7 @@ import RecrProfilePage from "./components/pages/recrProfilePage";
 import RecrSearchPage from "./components/pages/recrSearchPage";
 import RecrSearchResults from "./components/pages/recrSearchResults";
 import GradProfileView from "./components/pages/gradProfileView";
+import GradWorkPreference from "./components/pages/gradWorkPreference";
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
         <Route path="/recrSearchResults" component={RecrSearchResults} />
         <Route path="/recrSearchPage" component={RecrSearchPage} />
         <Route path="/gradProfileView" component={GradProfileView} />
-        <Route path="/gradProfilePage" component={GradProfilePage} />
+        <Route path="/gradWorkPreference" component={GradWorkPreference} />   
+        <Route path="/gradProfilePage" component={GradProfilePage} />             
         <Route exact path="/" component={Homepage} />
         <PrivateRoute path="/submissions">
           <GradProfilePage path="/gradProfilePage" />
