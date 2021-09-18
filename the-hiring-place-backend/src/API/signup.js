@@ -10,7 +10,7 @@ router.post("/", validationCheckUsers, async (req, res) => {
 
   const password = await bcrypt.hash(req.body.password, 10);
 
-  const sql = `INSERT INTO <table name> (name, email, password) VALUES ("${name}", "${email}", "${password}");`;
+  const sql = `INSERT INTO <table name> (email, password, student, recruiter) VALUES ("${email}", "${password}", "${student}", "${recruiter}");`;
 
   db.query(sql, function (error, results, fields) {
     if (error) throw error;

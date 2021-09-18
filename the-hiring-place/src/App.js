@@ -34,7 +34,6 @@ function App() {
         <Route path="/signIn" component={SignIn} />
         <Route path="/signUp" component={SignUp} />
       </Switch>
-      <Footer year={new Date().getFullYear()} />
     </BrowserRouter>
   );
 }
