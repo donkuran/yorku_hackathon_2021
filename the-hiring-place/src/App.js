@@ -23,6 +23,7 @@ function App() {
         <Route path="/recrSearchResults" component={RecrSearchResults} />
         <Route path="/recrSearchPage" component={RecrSearchPage} />
         <Route path="/gradProfileView" component={GradProfileView} />
+        <Route path="/gradProfilePage" component={GradProfilePage} />
         <Route exact path="/" component={Homepage} />
         <PrivateRoute path="/submissions">
           <GradProfilePage path="/gradProfilePage" />
@@ -31,7 +32,6 @@ function App() {
         <Route path="/signIn" component={SignIn} />
         <Route path="/signUp" component={SignUp} />
       </Switch>
-      <Footer year={new Date().getFullYear()} />
     </BrowserRouter>
   );
 }

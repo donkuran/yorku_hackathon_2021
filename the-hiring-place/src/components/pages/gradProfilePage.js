@@ -7,8 +7,7 @@ const GradProfilePage = () => {
 
   return (
     <Container>
-   
-
+    
     </Container>
   );
 };
