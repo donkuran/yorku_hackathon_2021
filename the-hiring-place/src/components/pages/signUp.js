@@ -1,50 +1,92 @@
-import React, { useState } from "react";
-import {
-  Form,
-  FormGroup,
-  Col,
-  Input,
-  Label,
-  Button,
-  Container,
-} from "reactstrap";
-// import BackButton from "../../shared/BackButton";
-// import LogOutButton from "../../shared/LogOutButton";
-// import parseJwt from "../../../Helpers/authHelper";
-
-const SignUP = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  
-  const SignUpSubmit = async (event) => {
-    event.preventDefault();
-    const response = await fetch("http://localhost:4000/signUp", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ firstName, lastName, email, password }),
+import React, { Component } from "react";
+class Signup extends Component {
+constructor(props){
+    super(props);
+    this.state = { email: "", password: "", confirm_password: "" };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+}
+handleChange(evt) {
+    this.setState({ 
+        [evt.target.name]: evt.target.value 
     });
-    const payload = await response.json();
-    if (response.status >= 400) {
-      alert(`Oops! Error ${response.status}:  ${payload.message}`);
-    } else {
-      alert(`Congrats! Submission submitted with id: ${payload.id}`);
-    }
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setPassword("");
-  };
-
-  return (
-    <Container>
-      
-    </Container>
-  );
-};
-
-export default SignUP;
+}
+handleSubmit(evt) {
+    evt.preventDefault();
+    //alert(`You typed: ${this.state.name}`);
+this.setState({name: ''});
+}    
+render()  {
+        return (
+            <div className="signup-wrapper">
+            <h1 className="title">Sign Up</h1>
+            <div className="signupGoogle-container">
+          <input id="signupGoogle" type="button" value="Sign up with Google" />
+        </div>          
+        <div className="signupLinkedIn-container">
+          <input id="signuplinkedIn" type="button" value="Sign up with LinkedIn " />
+        </div>
+        <div className="inputForm">
+            <form onSubmit={this.handleSubmit}>
+                <input id='email'
+                type='email' placeholder='Email Address' 
+                name='email'
+                value={this.state.name}
+                onChange={this.handleChange}
+                />
+                <input id='password'
+                type='password' placeholder='Password'    
+                name='password'
+                value={this.state.name}
+                onChange={this.handleChange} 
+                />
+                   <input id='password'
+                type='password' placeholder='Confirm Password'
+                name='confirm_password'
+                value={this.state.name}
+                onChange={this.handleChange}
+                />
+                <form>
+<br/>
+<div className="form-check">
+    I am a:
+  <label>
+    <input
+      type="radio"
+      name="graduate"
+      value="option1"
+      checked={true}
+      className="form-check-input"
+    />
+    Graduate looking for work
+  </label>
+</div>
+<div className="form-check">
+  <label>
+    <input
+      type="radio"
+      name="recruiter"
+      value="option2"
+      className="form-check-input"
+    />
+    Recruiter looking to hire
+  </label>
+</div>
+</form>
+                <button id="signup">Sign Up</button>
+                <div>
+                    <div className="smallPrint">
+                <p>By continuing you accept our standard <a id="terms" href="#">terms and conditions</a> and our <a id="terms" href="#">privacy policy.</a></p>
+</div>
+<br/>
+            <div className="haveAccount-container">
+            <a id="haveAccount" href="#">Have an account?</a>
+            <a id="login" href="#">Login</a>
+            </div>
+            </div>
+ </form>
+ </div>
+ </div>
+        )}
+        }
+export default Signup;
