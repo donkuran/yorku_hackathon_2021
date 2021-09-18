@@ -10,10 +10,52 @@ body, html {
 }
 
 .header {
-  padding: 30px;
-  text-align: center;
   background: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
+
+.header-yoh {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 37px;
+  align-items: center;
+  letter-spacing: 0.03em;
+  margin-left: 2%;
+}
+
+#logout {
+    background: #FFFFFF;
+    border: 1.5px solid #3AC2EF;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 18px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.015em;
+    color: #3AC2EF;
+    margin-top: 3px;
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 70px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #3AC2EF;
+    border-radius: 6px; 
+}
+
+#alert, #profile, #settings  {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 0%;
+
+} 
 
 .header h1 {
   font-size: 50px;
@@ -425,6 +467,7 @@ color: #686260;
   text-align: center;
   letter-spacing: -0.015em;
   color: #3AC2EF;
+  margin-right: 2%;
 }
 
 #contact {
@@ -455,6 +498,7 @@ color: #686260;
   text-align: center;
   letter-spacing: -0.015em;
   color: #3AC2EF;
+  margin-right: 2%;
 }
 
 .copyright {
@@ -467,6 +511,7 @@ color: #686260;
   text-align: center;
   letter-spacing: 0.03em;
   color: #000000;
+  margin-left: 2%;
 }
 
 

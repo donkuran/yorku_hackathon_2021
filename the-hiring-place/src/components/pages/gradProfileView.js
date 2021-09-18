@@ -3,6 +3,9 @@ import { Row, Col, Button, Container, FormGroup } from "reactstrap";
 import '../../css/gradProfileView.css';
 import profilePhoto from '../../images/profile2.png';
 import tooltip from '../../images/tooltip.png';
+import settings from '../../images/settings.svg';
+import profile from '../../images/profile.svg';
+import alert from '../../images/alert.svg';
 
 
 const GradProfileView = () => {
@@ -15,9 +18,12 @@ const GradProfileView = () => {
 
     <Container>
       <div className="gradProfile-wrapper">
-          <div className="myheader">
-              <h1>My Website</h1>
-              <p>Resize the browser window to see the effect.</p>
+          <div className="header">
+              <span className="header-yoh">YOH</span>
+              <input id="logout" type="button" style={{float:"right"}} onclick="logout()" value="Logout" />
+              <img id="settings" src={ settings } alt="settings icon" style={{float:"right"}} onclick="settings()" />
+              <img id="profile" src={ profile } alt="profile icon" style={{float:"right"}} onclick="profile()" />
+              <img id="alert" src={ alert } alt="alert icon" style={{float:"right"}} onclick="alert()" />
           </div>
 
         <form>
@@ -82,7 +88,7 @@ const GradProfileView = () => {
                   {/*  aboutMe-tooltip-content="Tooltip: Remember this is an opportunity to tell recruiters about why you
                                     would be a great addition to a team/company" */}
                     <div className="aboutMe-tooltip-container" >
-                          <img className="aboutMe-tooltip" src={ tooltip } alt="tooltip image"/>   
+                          <img className="aboutMe-tooltip" src={ tooltip } alt="tooltip icon"/>   
                     </div>   
 
                     <div className="aboutMeDesc-container">
