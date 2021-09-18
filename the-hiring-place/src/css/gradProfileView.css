@@ -9,6 +9,12 @@ body, html {
   overflow: scroll;
 }
 
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
 .header h1 {
   font-size: 50px;
 }
@@ -95,7 +101,8 @@ body, html {
 /* Add card */
 .card {
   padding: 15px;
-  margin-top: 20px;
+  padding-bottom: 45px;
+  margin-top: 30px;
   background: #E1DFDC;
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
@@ -126,6 +133,27 @@ body, html {
   height: auto;
   border-radius: 50%;
 }
+
+#upload {
+  position: absolute;
+  background: #3AC2EF;
+  border-style: none;
+  box-sizing: border-box;
+  border-radius: 6px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #FFFFFF;
+  width: 6rem;
+  margin-top: 35%;
+  margin-left: 5%;
+}
+
 
 .profile-detail-container {
   position: relative;
@@ -192,7 +220,7 @@ label {
 }
 
 /* Links section */
-#linkedIn, #websitePortfolio, #twitter, #instagram {
+#linkedIn, #websitePortfolio, #twitter, #instagram, #resume , .dummy {
   border-style: solid;
   border-width: 1px;
   font-size: 15px;
@@ -200,13 +228,7 @@ label {
   font-family: Lato;
   letter-spacing: -1.5%;
   margin-top: 10px;
-}
-
-#dummyContainer {
-  margin-top: 10px;
-  height: 15px;
-  visibility: hidden;
-  cursor: hidden;
+  margin-bottom: 16px;
 }
 
 #linkedIn {
@@ -294,22 +316,44 @@ label {
   border-color: black;
 }
 
-.techSkills-container {
-  margin-top: 20px;
+.techskills-container, .personalSkills-container {
+  position: relative;
+  margin-top: 3%;
   width: 100%;
-  height: 50px; /* added to see the actual position; should be changed to auto when code is added */
+  height: auto;
 }
 
-#enterSkills {
-  
+.personalSkills-container, .languages {
+  margin-top: 10%;
+}
+
+.techSkills, .personalSkills {
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+
+  /*Dummy props -- to be removed once finalized*/
+  height: 60px; /* added to see the actual position; should be changed to auto when code is added */
+  border-style: dotted;
+  border-color: grey;
+  font-size: 12px;
+  color: darkgray;
+}
+
+#enterTechSkills, #enterPersonalSkills, #languages {
   margin-top: 10px;
 }
 
-#addTechSkills {
+#languages {
+  width: 80%;
+
+}
+
+#addTechSkills, #addPersonalTechSkills  {
   position: absolute;
   width: 30%;
-  margin-left: 200px;
-  margin-top: 99px;
+  margin-left: 6%;
+  margin-top: 5%;
   background: #3AC2EF;
   border-radius: 6px;
   border: hidden;
@@ -339,7 +383,7 @@ label {
 .footer {
   position: relative;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 45px;
   height: auto;
   overflow: hidden;
   text-align: center;

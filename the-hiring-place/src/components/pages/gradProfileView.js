@@ -15,6 +15,11 @@ const GradProfileView = () => {
 
     <Container>
       <div className="gradProfile-wrapper">
+          <div className="myheader">
+              <h1>My Website</h1>
+              <p>Resize the browser window to see the effect.</p>
+          </div>
+
         <form>
           <div className="topnav">
             <a id="profile" href="#">Profile</a>
@@ -30,6 +35,7 @@ const GradProfileView = () => {
                         <div className="profilePicture-container">
                             <img className="profilePhoto" src={ profilePhoto } alt="profilePhoto"/>   
                         </div>
+                        <input id="upload" type="button" onclick="upload()" value="Upload" />
                         <div className="profile-detail-container">
                             <label className="label">Name</label> <br />
                             <input id="name" className="input-text" type="text" placeholder="Name" />  <br />
@@ -65,7 +71,7 @@ const GradProfileView = () => {
                       <input id="websitePortfolio" type="text" placeholder="Website Or Portfolio" />
                       <input id="twitter" type="text" placeholder="Twitter" />
                       <input id="instagram" type="text" placeholder="Instagram" />
-                      <input id="dummyContainer" type="text" />
+                      <input id="resume" type="text" placeholder="Resume Link" />
                   </div>
             </div>
 
@@ -93,10 +99,25 @@ const GradProfileView = () => {
                   </div>
 
                   <div className="card">
-                    <div className="cardTitle">Technical Skills</div>
-                    <div className="techSkills-container"></div>
-                    <input id="enterSkills" type="text" placeholder="Enter Skills" required />
-                    <input id="addTechSkills" type="button" onclick="addTechSkills()" value="Add" />
+                    <div className="techskills-container">
+                        <div className="cardTitle">Technical Skills</div>
+                        <div className="techSkills">This is where the added skills will be displayed</div>
+                        <input id="enterTechSkills" type="text" placeholder="Enter Skills" required />
+                        <input id="addTechSkills" type="button" onclick="addTechSkills()" value="Add" />
+                    </div>
+                    <div className="personalSkills-container">
+                        <div className="cardTitle">Personal Skills</div>
+                        <div className="personalSkills">This is where the added skills will be displayed</div>
+                        <input id="enterPersonalSkills" type="text" placeholder="Enter Skills" required />
+                        <input id="addPersonalTechSkills" type="button" onclick="addPersonalSkills()" value="Add" />
+                    </div>
+
+                    <div className="languages">
+                        <div className="cardTitle">Languages</div>
+                        <input id="languages" type="text" placeholder="Languages" required />
+                    </div>                    
+
+
                   </div>
               </div>
           </div>
