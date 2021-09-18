@@ -4,27 +4,10 @@
   padding: 0;
 }
 
-/* setiings WITHOUT <Container> component */
-/* body, html {
-  background-color: white;
-  overflow: scroll;
-} */
-
-/* setiings WITH <Container> component */
 body, html {
-  /* font-family: Arial; */
-  /* padding: 5px; */
   background-color: white;
   overflow: scroll;
 }
-
-
-
-/* .header {
-  padding: 30px;
-  text-align: center;
-  background: white;
-} */
 
 .header h1 {
   font-size: 50px;
@@ -55,7 +38,6 @@ body, html {
   font-weight: bold;
   font-size: 24px;
   line-height: 36px;
-  /* or 150% */
   letter-spacing: -0.015em;
   color: #3AC2EF;
 
@@ -67,7 +49,6 @@ body, html {
   font-weight: bold;
   font-size: 24px;
   line-height: 36px;
-  /* or 150% */
   letter-spacing: -0.015em;
   color: black;
 }
@@ -76,9 +57,7 @@ body, html {
   margin-top: 11px;
   margin-right: 15px;
   width: 70px;
-
   background: #3AC2EF;
-  /* border-color: #3AC2EF; */
   border: hidden;
   border-radius: 6px;
   font-family: Lato;
@@ -86,12 +65,9 @@ body, html {
   font-weight: bold;
   font-size: 15px;
   line-height: 18px;
-  /* identical to box height */
-  /* display: flex; */
   align-items: center;
   text-align: center;
   letter-spacing: -0.015em;
-
   color: #FFFFFF;
 }
 
@@ -101,12 +77,7 @@ body, html {
   color: black;
 }
 
-.row {
-  /* margin: auto; */
-  /* margin-left: 5%; */
-}
 
-/* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {   
   float: left;
@@ -118,7 +89,6 @@ body, html {
 .rightcolumn {
   float: left;
   width: 40%;
-  /* background-color: #f1f1f1; */
   padding-left: 30px;
 }
 
@@ -152,7 +122,6 @@ body, html {
 
 .profilePicture-container img {
   position: relative;
-  /* margin-top: 0%; */
   width: 100%;
   height: auto;
   border-radius: 50%;
@@ -161,7 +130,6 @@ body, html {
 .profile-detail-container {
   position: relative;
   float: right;
-  /* margin-right: 5px; */
   margin-left: 40%;
   width: 60%;
   height: auto;
@@ -187,10 +155,8 @@ label {
 .startDate-label {
 
   height: auto;
-  /* position: absolute; */
   width: 45%;
   float: left;
-  /* border-style: solid; */
 
 }
 
@@ -198,7 +164,6 @@ label {
 
   position: absolute;
   float: left;
-  /* border-style: solid; */
   width: 45%;
   height: auto;
   margin: 77px 200px;
@@ -235,7 +200,6 @@ label {
   font-family: Lato;
   letter-spacing: -1.5%;
   margin-top: 10px;
-  /* margin-bottom: 0%; */
 }
 
 #dummyContainer {
@@ -251,18 +215,12 @@ label {
 
 #startDate {
   margin-top: 5px;
-  /* border-style: solid; */
   width: 30%;
 }
 
 #endDate {
   position: absolute;
-  /* border-style: solid; */
-
-  /* position: absolute; */
   float: left;
-  /* border-style: solid; */
-  /* width: 45%; */
   height: auto;
   margin: 101px 200px;
   width: 30%;
@@ -274,7 +232,6 @@ label {
   float: left;
   width: 25%;
   height: auto;
-
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -340,11 +297,7 @@ label {
 .techSkills-container {
   margin-top: 20px;
   width: 100%;
-  /* height: auto; */
   height: 50px; /* added to see the actual position; should be changed to auto when code is added */
-  /* border-style: solid;
-  border-color: black;
-  border-width: 1px; */
 }
 
 #enterSkills {
@@ -355,7 +308,6 @@ label {
 #addTechSkills {
   position: absolute;
   width: 30%;
-  /* padding: 60px, 60px; */
   margin-left: 200px;
   margin-top: 99px;
   background: #3AC2EF;
@@ -367,8 +319,6 @@ label {
   font-weight: bold;
   font-size: 15px;
   line-height: 18px;
-  /* identical to box height */
-  /* display: flex; */
   align-items: center;
   text-align: center;
   letter-spacing: -0.015em;
@@ -394,8 +344,6 @@ label {
   overflow: hidden;
   text-align: center;
   background: #ddd;
-
-
   align-content: center;
 }
 
@@ -415,8 +363,6 @@ font-family: Lato;
 font-style: normal;
 font-weight: 900;
 font-size: 16px;
-/* line-height: 19px; */
-/* display: flex; */
 align-items: center;
 text-align: center;
 letter-spacing: 0.045em;
@@ -431,19 +377,13 @@ color: #686260;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  /* identical to box height */
-  /* display: flex; */
   align-items: center;
   text-align: center;
   letter-spacing: -0.015em;
-
-  /* YOH-DrkBlue */
   color: #3AC2EF;
-
 }
 
 #contact {
-  /* float: none; */
   background: #3AC2EF;
   border-radius: 4.11712px;
   font-family: Lato;
@@ -452,17 +392,12 @@ color: #686260;
   font-size: 10.2928px;
   font-size: 10px;
   line-height: 12px;
-  /* display: flex; */
   align-items: center;
   text-align: center;
   letter-spacing: 0.005em;
-
   color: #FFFFFF;
   width: 8rem;
-  /* margin-left: 10%; */
   margin-top: -15;
-
-
 }
 
 .terms-and-conditions {
@@ -472,18 +407,10 @@ color: #686260;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  /* display: flex; */
   align-items: center;
   text-align: center;
   letter-spacing: -0.015em;
-
-
   color: #3AC2EF;
-  /* width: 15px; */
-  /* margin-right: 5%; */
-  
-
-
 }
 
 .copyright {
@@ -493,13 +420,9 @@ color: #686260;
   font-weight: normal;
   font-size: 12px;
   line-height: 7px;
-  /* identical to box height, or 55% */
   text-align: center;
   letter-spacing: 0.03em;
-
   color: #000000;
-
-
 }
 
 
