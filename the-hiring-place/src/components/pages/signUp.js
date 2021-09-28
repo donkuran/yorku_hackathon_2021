@@ -11,7 +11,7 @@ import {
 import { NavLink, NavLink as RouteLink } from "react-router-dom";
 import GoogleLogin from "react-google-login";
 import "../../App.css";
-import "../../css/signUp.css";
+import "../../css/signup.css";
 import NavSignUp from "../shared/navSignUp";
 
 const SignUp = () => {
@@ -159,7 +159,7 @@ const SignUp = () => {
                 </Row>
               </FormGroup>
             </div>
-            <Button id="signUp" type="submit" >Sign Up</Button>
+            <Button id="signUp" type="submit" style={{color: "#ffffff", marginLeft: "11rem"}}>Sign Up</Button>
           </Form>
           <p
             style={{

@@ -1,8 +1,20 @@
 import React, { useState } from "react";
-import { Container, CardBody, Card, Row, Col, Form, Button } from "reactstrap";
+import {
+  Container,
+  CardBody,
+  Card,
+  Row,
+  Col,
+  Form,
+  Button,
+  FormGroup,
+  Label,
+  Input,
+} from "reactstrap";
 import NavHomepage from "../shared/navHomepage";
 import "../../css/honeyComb.css";
 import { NavLink as RouteLink } from "react-router-dom";
+import "../../css/signup.css";
 
 const Homepage = () => {
   const [name, setName] = useState("");
@@ -154,8 +166,21 @@ const Homepage = () => {
         }}
       >
         <Row>
-          <Col></Col>
-          <Col></Col>
+          <Col>
+            <Container
+              style={{
+                width: "700px",
+                height: "515px",
+                border: "1px solid",
+                marginLeft: "5rem",
+              }}
+            ></Container>
+          </Col>
+          <Col>
+            <Container
+              style={{ width: "600px", height: "515px", border: "1px solid" }}
+            ></Container>
+          </Col>
         </Row>
       </div>
       <div
@@ -176,9 +201,110 @@ const Homepage = () => {
         }}
       >
         <Row>
-          <Col></Col>
           <Col>
-            <Form></Form>
+            {" "}
+            <Container
+              style={{
+                width: "715px",
+                height: "515px",
+                marginLeft: "70px",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: "300px",
+                  fontFamily: "sans-serif",
+                  fontWeight: "bold",
+                  color: "#686260",
+                }}
+              >
+                YOH!
+              </p>
+            </Container>
+          </Col>
+          <Col>
+            <Container
+              style={{
+                width: "500px",
+                height: "515px",
+                paddingTop: "40px",
+                marginLeft: "6rem",
+              }}
+            >
+              <div
+                className="signup-wrapper"
+                style={{ padding: "20px", width: "400px" }}
+              >
+                <p>
+                  Have any questions? Just ask! We are here to help you reach
+                  your next goal.
+                </p>
+                <Form className="inputForm" onSubmit={ContactSubmit}>
+                  <div className="name-container">
+                    <input
+                      id="contactName"
+                      type="name"
+                      placeholder="Name"
+                      name="name"
+                      required
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      style={{
+                        paddingLeft: "3px",
+                        letterSpacing: "0.03rem",
+                        width: "100%",
+                      }}
+                    />
+                  </div>
+                  <div
+                    className="email-container"
+                    style={{ paddingTop: "20px" }}
+                  >
+                    <input
+                      id="contactEmail"
+                      type="email"
+                      placeholder="Email Address"
+                      name="email"
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      style={{
+                        paddingLeft: "3px",
+                        letterSpacing: "0.03rem",
+                        width: "100%",
+                      }}
+                    />
+                  </div>
+                  <div
+                    className="message-container"
+                    style={{ paddingTop: "20px" }}
+                  >
+                    <textarea
+                      id="contactMessage"
+                      type="password"
+                      placeholder="Message"
+                      name="message"
+                      required
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      style={{
+                        paddingLeft: "3px",
+                        letterSpacing: "0.1rem",
+                        width: "100%",
+                        height: "150px",
+                      }}
+                    />
+                  </div>
+                  <Button
+                    id="signUp"
+                    type="submit"
+                    style={{ color: "#ffffff", marginLeft: "0" }}
+                  >
+                    Send
+                  </Button>
+                </Form>
+              </div>
+            </Container>
           </Col>
         </Row>
       </div>
