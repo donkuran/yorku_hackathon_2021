@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Navigation from "./components/shared/navigation";
+import Settings from "./components/pages/settingsPage";
 import Footer from "./components/shared/footer";
 import Homepage from "./components/pages/homepage";
 import SignIn from "./components/pages/signIn";
@@ -14,18 +14,26 @@ import RecrSearchPage from "./components/pages/recrSearchPage";
 import RecrSearchResults from "./components/pages/recrSearchResults";
 import GradProfileView from "./components/pages/gradProfileView";
 import GradWorkPreference from "./components/pages/gradWorkPreference";
+import GradAbout from "./components/pages/gradAbout";
+import GradInterests from "./components/pages/gradInterests";
+import gradEducation from "./components/pages/gradEducation";
+import gradSkills from "./components/pages/gradSkills";
 
 function App() {
   return (
     <BrowserRouter>
-      <Navigation />
       <Switch>
         <Route path="/gradNotifications" component={GradNotifications} />
         <Route path="/recrSearchResults" component={RecrSearchResults} />
         <Route path="/recrSearchPage" component={RecrSearchPage} />
         <Route path="/gradProfileView" component={GradProfileView} />
-        <Route path="/gradWorkPreference" component={GradWorkPreference} />   
-        <Route path="/gradProfilePage" component={GradProfilePage} />             
+        <Route path="/gradWorkPreference" component={GradWorkPreference} />
+        <Route path="/gradAbout" component={GradAbout} />
+        <Route path="/gradInterests" component={GradInterests} />
+        <Route path="/gradEducation" component={gradEducation} />
+        <Route path="/gradSkills" component={gradSkills} />
+        <Route path="/gradProfilePage" component={GradProfilePage} />
+        <Route path="/settingsPage" component={Settings} />
         <Route exact path="/" component={Homepage} />
         <PrivateRoute path="/submissions">
           <GradProfilePage path="/gradProfilePage" />
@@ -34,6 +42,7 @@ function App() {
         <Route path="/signIn" component={SignIn} />
         <Route path="/signUp" component={SignUp} />
       </Switch>
+      <Footer year={new Date().getFullYear()}/>
     </BrowserRouter>
   );
 }

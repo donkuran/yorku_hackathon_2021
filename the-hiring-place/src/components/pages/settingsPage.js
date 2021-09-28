@@ -1,44 +1,34 @@
 import React, { useState } from "react";
-import {
-  Row,
-  Col,
-  Button,
-  Container,
-  NavLink,
-  Form,
-  Card,
-  CardBody,
-  CardText,
-} from "reactstrap";
+import { Row, Col, Button, Container, NavLink, Form, Card, CardBody,CardText } from "reactstrap";
 import { NavLink as RouteLink } from "react-router-dom";
 import "../../css/settings.css";
 import Navigation2 from "../shared/navigation2";
 
-const GradNotification = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [auth, setAuth] = useState(true);
+const GradProfilePage = () => {
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");
+const [auth, setAuth] = useState(true);
 
-  const SignInSubmit = async (event) => {
-    event.preventDefault();
-    const response = await fetch("http://localhost:4000/auth", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-    });
-    const payload = await response.json();
-    if (response.status >= 400) {
-      setAuth(false);
-      alert(`Oops! Error ${response.status}:  ${payload.message}`);
-    } else {
-      sessionStorage.setItem("token", payload.token);
-    }
-    setEmail("");
-    setPassword("");
-  };
+const SignInSubmit = async (event) => {
+  event.preventDefault();
+  const response = await fetch("http://localhost:4000/auth", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email, password }),
+  });
+  const payload = await response.json();
+  if (response.status >= 400) {
+    setAuth(false);
+    alert(`Oops! Error ${response.status}:  ${payload.message}`);
+  } else {
+    sessionStorage.setItem("token", payload.token);
+  }
+  setEmail("");
+  setPassword("");
+};
 
   return (
     <>
@@ -57,7 +47,7 @@ const GradNotification = () => {
                 </Card>
               )}
               <div>
-                <h1 className="title">Notifications Page</h1>
+                <h1 className="title">Account Details</h1>
               </div>
               <Form className="inputForm" onSubmit={SignInSubmit}>
                 <div>
@@ -96,4 +86,4 @@ const GradNotification = () => {
   );
 };
 
-export default GradNotification;
+export default GradProfilePage;

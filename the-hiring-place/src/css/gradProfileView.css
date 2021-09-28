@@ -5,7 +5,6 @@
 }
 
 body, html {
-  background-color: white;
   overflow: scroll;
 }
 
@@ -28,8 +27,6 @@ body, html {
   padding: 15px;
   padding-bottom: 20px;
   margin-top: 30px;
-  background: #E1DFDC;
-  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .cardTitle {
@@ -161,34 +158,6 @@ body, html {
 #enterIndustry, #enterWorkLocation {
   margin-top: 20px;
 }
-
-#addIndustry, #addWorkLocation  {
-  position: absolute;
-  width: 20%;
-  margin-left: 6%;
-  margin-top: 4%;
-  background: #3AC2EF;
-  border-radius: 6px;
-  border: hidden;
-
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 18px;
-  align-items: center;
-  text-align: center;
-  letter-spacing: -0.015em;
-
-  color: #FFFFFF;
-
-}
-
-#addWorkLocation {
-  margin-top: 7%;
-
-}
-
 
 .checkmark {
   margin-left: 1%;
