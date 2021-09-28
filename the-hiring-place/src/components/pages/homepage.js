@@ -1,20 +1,17 @@
 import React, { useState } from "react";
 import {
   Container,
-  CardBody,
-  Card,
   Row,
   Col,
   Form,
   Button,
-  FormGroup,
-  Label,
-  Input,
 } from "reactstrap";
 import NavHomepage from "../shared/navHomepage";
 import "../../css/honeyComb.css";
 import { NavLink as RouteLink } from "react-router-dom";
 import "../../css/signup.css";
+import Hands from "../../images/hands.png";
+import HexagonBackground from "../../images/hexagonBackground.png";
 
 const Homepage = () => {
   const [name, setName] = useState("");
@@ -91,7 +88,11 @@ const Homepage = () => {
               </span>
               <span>
                 <Button
-                  style={{ color: "#ffffff", backgroundColor: "#3AC2EF" }}
+                  style={{
+                    color: "#ffffff",
+                    backgroundColor: "#3AC2EF",
+                    border: "none",
+                  }}
                   tag={RouteLink}
                   to="/signUp"
                 >
@@ -165,21 +166,63 @@ const Homepage = () => {
           margin: "0px",
         }}
       >
-        <Row>
+        <Row style={{}}>
           <Col>
             <Container
               style={{
                 width: "700px",
                 height: "515px",
-                border: "1px solid",
                 marginLeft: "5rem",
+                paddingTop: "4rem",
               }}
-            ></Container>
+            >
+              <h2
+                style={{
+                  fontSize: "20px",
+                  fontWeight: "bold",
+                }}
+              >
+                Helping York University Grads stand out and get noticed.
+              </h2>
+              <p>
+                The purpose of your YOH! Profile is to highlight your unique set
+                of skills,
+                <br /> strengths and interests.
+                <br />
+                YOH! Go show the world your potential as a team member and
+                future
+                <br /> employee!
+              </p>
+              <h2 style={{ fontSize: "20px", fontWeight: "bold" }}>
+                Making it easy for companies to find new talent for a team.
+              </h2>
+              <p>
+                We have designed the YOH! interface to be easily searchable by
+                any type of
+                <br /> program our students graduate from, as well as by any
+                type of skills you are
+                <br /> looking for on a team.
+              </p>
+              <h2 style={{ fontSize: "20px", fontWeight: "bold" }}>
+                A team member is more than just a resume...
+              </h2>
+              <p>
+                YOH! Graduate Profiles offer numerous areas for our students to
+                give employers a<br /> sense of their unique personalities and
+                abilities. We make it easy to search our
+                <br /> talent pool and discover a new brilliant mind that you
+                can <b>work with.</b>
+              </p>
+            </Container>
           </Col>
           <Col>
-            <Container
-              style={{ width: "600px", height: "515px", border: "1px solid" }}
-            ></Container>
+            <Container style={{ width: "600px", height: "515px" }}>
+              <img
+                src={Hands}
+                alt="fists put together in a circle"
+                style={{ width: "auto", height: "358px", marginTop: "4rem" }}
+              />
+            </Container>
           </Col>
         </Row>
       </div>
@@ -189,15 +232,125 @@ const Homepage = () => {
           height: "515px",
           backgroundColor: "#F5F5F5",
           margin: "0px",
+          backgroundImage: `url(${HexagonBackground})`,
+          textAlign: "center",
         }}
-      ></div>
+      >
+        <h2 style={{ fontSize: "54px", paddingTop: "30px" }}>
+          Ready to Get Started?
+        </h2>
+        <Row style={{ marginTop: "35px" }}>
+          <Col>
+            <Container
+              style={{
+                width: "356px",
+                height: "292px",
+                border: "1px solid #3AC2EF",
+                borderRadius: "20%",
+                backgroundColor: "#ffffff",
+                boxShadow: "10px 10px 30px 5px rgba(0, 0, 0, 0.1)",
+              }}
+            >
+              <i
+                class="fas fa-user-plus fa-3x"
+                style={{ paddingTop: "22px" }}
+              ></i>
+              <h3 style={{ fontSize: "24px", paddingTop: "7.94px" }}>
+                Join Now
+              </h3>
+              <p>
+                Simply sign up as a York
+                <br /> Graduating Student or as an
+                <br />
+                Employer/Recruiter looking
+                <br /> for talent.
+              </p>
+            </Container>
+          </Col>
+          <Col>
+            <Container
+              style={{
+                width: "356px",
+                height: "292px",
+                border: "1px solid #3AC2EF",
+                borderRadius: "20%",
+                backgroundColor: "#ffffff",
+                boxShadow: "10px 10px 30px 5px rgba(0, 0, 0, 0.1)",
+              }}
+            >
+              <i
+                class="fas fa-address-card fa-3x"
+                style={{ paddingTop: "22px" }}
+              ></i>
+              <h3 style={{ fontSize: "24px", paddingTop: "7.94px" }}>
+                Create Profile
+              </h3>
+              <p>
+                Students create a profile to share their
+                <br /> background, experience,and skills.
+              </p>
+              <p>
+                Recruiters/Employers create a<br /> quick profile to save
+                preferences
+                <r />
+                and then proceed to search.
+              </p>
+            </Container>
+          </Col>
+          <Col>
+            <Container
+              style={{
+                width: "356px",
+                height: "292px",
+                border: "1px solid #3AC2EF",
+                borderRadius: "20%",
+                backgroundColor: "#ffffff",
+                boxShadow: "10px 10px 30px 5px rgba(0, 0, 0, 0.1)",
+              }}
+            >
+              <i
+                className="fas fa-network-wired fa-3x"
+                style={{ paddingTop: "22px" }}
+              ></i>
+              <h3 style={{ fontSize: "24px", paddingTop: "7.94px" }}>
+                Connect
+              </h3>
+              <p>
+                {" "}
+                To connect or discuss
+                <br /> potential job opportunities,
+                <br /> our interface allows you to
+                <br /> Add Favorites, send Messages
+                <br /> and receive Notifications
+                <br /> through your E-mail inbox.
+              </p>
+            </Container>
+          </Col>
+        </Row>
+        <Row style={{}}>
+          <span>
+            <Button
+              style={{
+                color: "#ffffff",
+                backgroundColor: "#3AC2EF",
+                border: "none",
+                marginTop: "25px",
+              }}
+              tag={RouteLink}
+              to="/signUp"
+            >
+              Get started!
+            </Button>
+          </span>
+        </Row>
+      </div>
       <div
         className="d-flex align-items-center"
         style={{
           width: "100%",
           height: "555px",
           backgroundColor: "none",
-          margin: "0px",
+          paddingTop: "3rem",
         }}
       >
         <Row>
