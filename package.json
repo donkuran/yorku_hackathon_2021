@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "html5-file-selector": "^2.1.0",
+    "react-dropzone-uploader": "^2.11.0",
+    "react-tooltip": "^4.2.21",
+    "style": "^0.0.3",
+    "styled-components": "^5.3.1"
+  }
+}
