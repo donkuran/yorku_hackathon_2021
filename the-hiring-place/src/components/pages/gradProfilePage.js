@@ -34,6 +34,7 @@ const GradProfilePage = () => {
           <div className="row">
               <div className="leftcolumn">
                   <div className="card">
+                       
                         <div className="profilePicture-container">
                             <img className="profilePhoto" src={ profilePhoto } alt="profilePhoto"/>   
                         </div>

@@ -1,0 +1,697 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  background-color: white;
+  overflow: scroll;
+}
+
+.header {
+  background: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.header-yoh {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 37px;
+  align-items: center;
+  letter-spacing: 0.03em;
+  margin-left: 2%;
+}
+
+#logout {
+    background: #FFFFFF;
+    border: 1.5px solid #3AC2EF;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 18px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.015em;
+    color: #3AC2EF;
+    margin-top: 3px;
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 70px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #3AC2EF;
+    border-radius: 6px; 
+}
+
+#alert, #profile, #settings  {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 0%;
+
+} 
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color:white;
+  border-bottom: solid 1px black;
+  border-top: solid 1px black;
+  height: 45px;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 3px 16px;
+  text-decoration: none;
+}
+
+#profile {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.015em;
+  color: #3AC2EF;
+
+}
+
+#workPreference {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.015em;
+  color: black;
+}
+
+#save, #edit, #view {
+  margin-top: 11px;
+  margin-right: 15px;
+  width: 70px;
+  background: #3AC2EF;
+  border: hidden;
+  border-radius: 6px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #FFFFFF;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+/* Left column */
+.leftcolumn {   
+  float: left;
+  /* width: 30%; */
+  height: auto;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  /* width: 67%; */
+  padding-left: 20px;
+  /* height: 1500px; */
+}
+
+/* Add card */
+.card {
+  padding: 15px;
+  padding-bottom: 45px;
+  margin-top: 30px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: 400px;
+  box-sizing: border-box;
+}
+
+
+
+.cardTitle {
+  position: relative;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.015em;
+  color: #000000;
+}
+
+/* Profile section */
+.profilePicture-container {
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 3%;
+  float: left;
+  width: 25%;
+  height: auto;
+}
+
+.profilePicture-container img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+#upload, #myprofile-save {
+  /* position: absolute; */
+  background: #3AC2EF;
+  border-style: none;
+  box-sizing: border-box;
+  border-radius: 6px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #FFFFFF;
+  width: 6rem;
+  /* margin-top: 40%;
+  margin-left: 5%; */
+}
+
+#upload {
+  position: absolute;
+  margin-top: 30%;
+  margin-left: 6%;
+}
+
+#myprofile-save {
+  margin-top: 6%;
+  /* margin-top: 40%;
+  margin-left: 5%; */
+}
+
+.profile-detail-container {
+  position: relative;
+  float: right;
+  margin-left: 35%;
+  margin-top: 5%;
+  width: 65%;
+  height: auto;
+}
+
+/* input fields labels */
+label {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.015em; 
+  color: #000000;  
+  margin-top: 15px;
+}
+
+.roleTitle-label {
+  position: absolute;
+  margin-left: 90px;
+}
+
+.startDate-label {
+
+  height: auto;
+  width: 45%;
+  float: left;
+
+}
+
+.endDate-label {
+
+  position: absolute;
+  float: left;
+  width: 45%;
+  height: auto;
+  margin: 77px 200px;
+
+}
+
+/* input texts */
+#name, #pronouns, #roleTitle, #program, #graduationYear, #location, #country, #aboutMeDescription, #programCourse, 
+#startDate, #endDate, #enterSkills {
+  border-style: solid;
+  border-width: 1px;
+  font-size: 15px;
+  font-style: normal;
+  font-family: Lato;
+  letter-spacing: -1.5%;
+}
+
+/* Full-length input text */
+#name, #program {
+  width: 90%;
+}
+
+/* Half-length input text */
+#pronouns, #roleTitle, #graduationYear, #location, #country, #enterSkills {
+  width: 45%;
+}
+
+/* Links section */
+#linkedIn, #websitePortfolio, #twitter, #instagram, #resume , .dummy {
+  border-style: solid;
+  border-width: 1px;
+  font-size: 15px;
+  font-style: normal;
+  font-family: Lato;
+  letter-spacing: -1.5%;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #D6CFCA;
+}
+
+#linkedIn {
+  margin-top: 20px;
+}
+
+#startDate {
+  margin-top: 5px;
+  width: 30%;
+}
+
+#endDate {
+  position: absolute;
+  float: left;
+  height: auto;
+  margin: 101px 200px;
+  width: 30%;
+}
+
+.cardTitle-myProfile, .cardTitle-favourites {
+  position: absolute;
+  margin-top: 0%;
+  float: left;
+  width: 25%;
+  height: auto;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.015em;
+  color: #000000;
+}
+
+
+/* tooltip */
+.aboutMe-tooltip-container {
+  position: relative;
+  float: left;
+  margin-left: 70px;
+  width: 3%;
+  line-height: 18px;
+}
+
+.aboutMe-tooltip-container .aboutMe-tooltip {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.aboutMeDesc-container {
+  margin-top: 20px;
+  width: 100%;
+  height: 150px;
+
+}
+
+#aboutMeDescription {
+  width: 100%;
+  height: 150px;
+  margin-top: 0%;
+  text-align:start;
+}
+
+.aboutMe-tooltip:hover::after {
+  content: attr(aboutMe-tooltip-content);
+}
+
+#aboutMeDescription {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: -0.015em;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#programCourse {
+  margin-top: 20px;
+}
+
+#startDate, #endDate {
+  border-style: solid;
+  border-color: black;
+}
+
+.techskills-container, .personalSkills-container {
+  position: relative;
+  margin-top: 3%;
+  width: 100%;
+  height: auto;
+}
+
+.personalSkills-container, .languages {
+  margin-top: 10%;
+}
+
+.techSkills, .personalSkills {
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+
+  /*Dummy props -- to be removed once finalized*/
+  height: 60px; /* added to see the actual position; should be changed to auto when code is added */
+  border-style: dotted;
+  border-color: grey;
+  font-size: 12px;
+  color: darkgray;
+}
+
+#enterTechSkills, #enterPersonalSkills, #languages {
+  margin-top: 10px;
+}
+
+#languages {
+  width: 80%;
+
+}
+
+#addTechSkills, #addPersonalTechSkills  {
+  position: absolute;
+  width: 30%;
+  margin-left: 6%;
+  margin-top: 5%;
+  background: #3AC2EF;
+  border-radius: 6px;
+  border: hidden;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #FFFFFF;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Footer */
+.footer {
+  position: relative;
+  padding: 20px;
+  margin-top: 45px;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+  background: #ddd;
+  align-content: center;
+}
+
+.yoh1 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #000000;
+}
+
+.yoh2 {
+font-family: Lato;
+font-style: normal;
+font-weight: 900;
+font-size: 16px;
+align-items: center;
+text-align: center;
+letter-spacing: 0.045em;
+color: #686260;
+
+}
+
+.privacy-policy {
+  float: right;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #3AC2EF;
+  margin-right: 2%;
+}
+
+#contact {
+  background: #3AC2EF;
+  border-radius: 4.11712px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 10.2928px;
+  font-size: 10px;
+  line-height: 12px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #FFFFFF;
+  width: 8rem;
+  margin-top: -15;
+}
+
+.terms-and-conditions {
+  float: right;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #3AC2EF;
+  margin-right: 2%;
+}
+
+.copyright {
+  float: left;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 7px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #000000;
+  margin-left: 2%;
+}
+
+
+
+
+
+
+.table-container{
+  position: relative;
+  margin-top: 10%;
+  /* border-style: solid 5px green; */
+  /* width: 500px; */
+  width: 100%;
+  height: auto;
+  overflow: scroll;
+}
+
+/* Tables starts here */
+table{
+  position: relative;
+  width: 100%;
+  font-size: 12px;
+  white-space: nowrap;
+  /*Add this to change the color of the entire texts inside the table
+  color: lightcyan; */
+  /*border-collapse: collapse is used to remove extra spaces in between the borders */
+  border-collapse: collapse;
+
+  /* margin-top: 10%; */
+
+  /* border: solid 1px red; */
+  height: auto;
+  /* overflow: scroll; */
+}
+
+
+/* table>thead{
+  padding: 8px;
+  background-color:#A0937D;
+  color: white; 
+} */
+
+
+/* table>thead th{
+  padding: 10px 25px;
+  border: 1px solid;
+  border-color: red;
+} */
+
+
+
+table tr{
+  /* text-align: center; */
+}
+
+
+
+table td{
+  /* border: 1px solid white; */
+  border-bottom: solid 3px white;
+  border-top: solid 3px white;
+  background: rgba(196, 196, 196, 0.39);
+  margin-left: 0;
+  height: 3rem;
+}
+
+
+table tr:hover, table tr:active  {
+  background-color: #D2D3C9;
+  background-color: #CDC9C3;
+  
+}
+
+.fav_image-wrapper {
+  /* border-style: solid 1px red; */
+  /* position: relative; */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.fav_img-container {
+  width: 45%;
+}
+
+.fav_text-container {
+  margin-left: 5px;
+}
+
+/* table>tbody> tr td .fav_text-container  {
+  border-style: solid red;
+} */
+
+table>tbody> tr td img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;   /* makes the image round */
+  /* left: 0; */
+}
+
+/* .fav_name {
+  padding-left: -10px;
+  color: red;
+
+  border-style: solid 1px red;
+} */
+
+
+.viewComments {
+  /* background-color: #3AC2EF;
+  border-radius: 6px;
+  cursor: pointer;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #FFFFFF; */
+
+  background: #3AC2EF;
+  /* background: red; */
+  border-style: none;
+  box-sizing: border-box;
+  border-radius: 6px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #FFFFFF;
+  width: 6rem;
+
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}

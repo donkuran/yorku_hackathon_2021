@@ -25,7 +25,8 @@ function App() {
         <Route path="/recrSearchPage" component={RecrSearchPage} />
         <Route path="/gradProfileView" component={GradProfileView} />
         <Route path="/gradWorkPreference" component={GradWorkPreference} />   
-        <Route path="/gradProfilePage" component={GradProfilePage} />             
+        <Route path="/gradProfilePage" component={GradProfilePage} />     
+        <Route path="/recrProfilePage" component={RecrProfilePage} />          
         <Route exact path="/" component={Homepage} />
         <PrivateRoute path="/submissions">
           <GradProfilePage path="/gradProfilePage" />
