@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col, NavLink } from "reactstrap";
 import { NavLink as RouteLink } from "react-router-dom";
 import "../../css/footer.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Footer = (props) => {
   return (

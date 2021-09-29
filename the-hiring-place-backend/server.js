@@ -31,7 +31,7 @@ app.use("/auth", login);
 app.use("/message", message);
 app.use("/createProfile", jwtVerify, createProfile);
 app.use("/maintainProfile", maintainProfile);
-app.use("/signup", jwtVerify, signup);
+app.use("/signup", signup);
 
 
 app.use("*", (req, res) => {

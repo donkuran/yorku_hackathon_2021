@@ -8,6 +8,15 @@ dotenv.config();
 
 const router = express.Router();
 
+const validateAuthForm = (reqBody) => {
+  const schemaUserForm = Joi.object({
+    email: Joi.string().min(5).required(),
+    password: Joi.string().min(8).required(),
+  });
+
+  return schemaUserForm.validate(reqBody);
+};
+
 const getCredentials = (req) => {
   return new Promise((resolve, reject) => {
     // Validate input
@@ -54,13 +63,14 @@ const validateUser = (userCredentials, usersFullCredentials) => {
 const getToken = (validUser) => {
   const payload = {
     login_id: validUser.login_id,
-    isadmin: validUser.isadmin,
+    isStudent: validUser.isStudent,
+    isRecruiter: validUser.isRecruiter,
   };
   return jwtGenerator.sign(payload, `${process.env.ACCESS_JWT_SECRET}`);
 };
 
 router.post("/", async (req, res) => {
-  const sql = `SELECT e.email, e.password, a.isadmin 
+  const sql = `SELECT e.email, e.password, a.isStudent, a.isRecruiter 
     FROM emrconn.employee e 
     INNER JOIN emrconn.admin a 
     ON ( e.employee_id = a.employee_id 
@@ -82,14 +92,5 @@ router.post("/", async (req, res) => {
   } finally {
   }
 });
-
-const validateAuthForm = (reqBody) => {
-  const schemaUserForm = Joi.object({
-    login_id: Joi.string().min(5).required(),
-    password: Joi.string().min(8).required(),
-  });
-
-  return schemaUserForm.validate(reqBody);
-};
 
 export default router;

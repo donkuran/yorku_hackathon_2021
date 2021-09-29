@@ -11,8 +11,8 @@ import {
 } from "reactstrap";
 import "../../css/navigation.css";
 import { NavLink as RouteLink } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Logo from "./logo"
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const NavHomepage = ({style}) => {
   const [isOpen, setIsOpen] = useState(false);

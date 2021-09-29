@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Container, NavLink, Form, Col, Row, Button } from "reactstrap";
+import { Container, Form, Col, Row, Button } from "reactstrap";
 import { NavLink as RouteLink } from "react-router-dom";
 import "../../css/gradProfilePage.css";
 import profilePhoto from "../../images/profilepic.jpg";
 import Navigation2 from "../shared/navigation2";
 import GradProfileNav from "../shared/gradProfileNav";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const GradProfilePage = () => {
   const [name, setName] = useState("");

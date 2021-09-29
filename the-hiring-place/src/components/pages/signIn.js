@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import {
-  Container,
   Button,
   Form,
   Card,
@@ -15,9 +14,8 @@ import { NavLink as RouteLink } from "react-router-dom";
 import GoogleLogin from "react-google-login";
 import "../../App.css";
 import "../../css/signIn.css";
-// import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import NavSignIn from "../shared/navSignIn";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import { useHistory, useLocation } from "react-router-dom";
 
@@ -45,7 +43,7 @@ const SignIn = () => {
     } else {
       sessionStorage.setItem("token", payload.token);
 
-      let { from } = location.state || { from: { pathname: "/submissions" } };
+      let { from } = location.state || { from: { pathname: "/gradProfileView" } };
       history.replace(from);
     }
     setEmail("");
@@ -145,7 +143,7 @@ const SignIn = () => {
         </Form>
         <Row> 
           <Col style={{ marginLeft: "3.5rem" }}>
-            <a id="needAccount">Need an account?</a>
+            <p id="needAccount">Need an account?</p>
           </Col>
           <Col>
             <NavLink id="signIn" tag={RouteLink} to="/signUp">

@@ -4,7 +4,6 @@ import {
   Col,
   Button,
   Container,
-  NavLink,
   Form,
   Card,
   CardBody,
@@ -13,6 +12,7 @@ import {
 import { NavLink as RouteLink } from "react-router-dom";
 import "../../css/settings.css";
 import Navigation2 from "../shared/navigation2";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const GradNotification = () => {
   const [email, setEmail] = useState("");

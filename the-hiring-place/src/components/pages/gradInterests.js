@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Container, NavLink, Form, Row, Col, Button } from "reactstrap";
+import { Container, Form, Row, Col, Button } from "reactstrap";
 import { NavLink as RouteLink } from "react-router-dom";
 import "../../css/gradWorkPreference.css";
 import Navigation2 from "../shared/navigation2";
-import tooltip from "../../images/tooltip.png";
 import GradProfileNav from "../shared/gradProfileNav";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const GradWorkPreference = () => {
   const [description, setDescription] = useState("");

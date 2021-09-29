@@ -19,7 +19,6 @@ const jwtVerify = (req, res, next) => {
 
 
 //Profile validation
-
 const validationCheckEntries = (req, res, next) => {
   const requiredEntryProps = [
     "name",

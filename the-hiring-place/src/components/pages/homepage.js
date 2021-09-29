@@ -12,6 +12,7 @@ import { NavLink as RouteLink } from "react-router-dom";
 import "../../css/signup.css";
 import Hands from "../../images/hands.png";
 import HexagonBackground from "../../images/hexagonBackground.png";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Homepage = () => {
   const [name, setName] = useState("");
@@ -42,7 +43,7 @@ const Homepage = () => {
   return (
     <>
       <NavHomepage />
-      <div
+      <Row
         className="align-items-center"
         style={{
           width: "100%",
@@ -59,7 +60,7 @@ const Homepage = () => {
                 paddingLeft: "5rem",
               }}
             >
-              <span
+              <Row
                 style={{
                   color: "#3AC2EF",
                   fontFamily: "sans-serif",
@@ -68,13 +69,13 @@ const Homepage = () => {
                 }}
               >
                 YOH!
-              </span>
+              </Row>
               <p style={{ fontSize: "38px" }}>
                 Welcome to the
                 <br />
                 <b>YORK OPPORTUNITY HUB</b>
               </p>
-              <span>
+              <Row>
                 <p style={{ fontSize: "15.45px" }}>
                   The York Opportunity Hub is a new database for York University
                   <br />
@@ -85,8 +86,8 @@ const Homepage = () => {
                   <br />
                   individuals and potential .
                 </p>
-              </span>
-              <span>
+              </Row>
+              <Row>
                 <Button
                   style={{
                     color: "#ffffff",
@@ -98,7 +99,7 @@ const Homepage = () => {
                 >
                   Get started!
                 </Button>
-              </span>
+              </Row>
             </Container>
           </Col>
           <Col>
@@ -156,8 +157,8 @@ const Homepage = () => {
             </Container>
           </Col>
         </Row>
-      </div>
-      <div
+      </Row>
+      <Row
         className="d-flex align-items-center"
         style={{
           width: "100%",
@@ -225,8 +226,8 @@ const Homepage = () => {
             </Container>
           </Col>
         </Row>
-      </div>
-      <div
+      </Row>
+      <Row
         style={{
           width: "100%",
           height: "515px",
@@ -343,8 +344,8 @@ const Homepage = () => {
             </Button>
           </span>
         </Row>
-      </div>
-      <div
+      </Row>
+      <Row
         className="d-flex align-items-center"
         style={{
           width: "100%",
@@ -460,7 +461,7 @@ const Homepage = () => {
             </Container>
           </Col>
         </Row>
-      </div>
+      </Row>
     </>
   );
 };
