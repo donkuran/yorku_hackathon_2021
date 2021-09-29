@@ -13,40 +13,41 @@ const RecrProfilePage = () => {
             <hr></hr>
         </Row>
 
-        <div className="row">
-              <div className="leftcolumn">
+        <div className="recr_row">
+              <div className="recr_leftcolumn">
                 <form>
-                  <div className="card">
-                       <div className="cardTitle-myProfile">My Profile</div>
-                        <div className="profilePicture-container">
-                            <img className="profilePhoto" src={ recr_ProfilePhoto } alt="profilePhoto"/>   
+                  <div className="recr_card">
+                       <div className="recr_cardTitle-myProfile">My Profile</div>
+                        <div className="recr_profilePicture-container">
+                            <img className="recr_profilePhoto" src={ recr_ProfilePhoto } alt="recr_profilePhoto"/>   
+                            <input id="recr_upload" type="button" onclick="upload()" value="Upload" />
                         </div>
-                        <input id="upload" type="button" onclick="upload()" value="Upload" />
-                        <div className="profile-detail-container">
+               
+                        <div className="recr_profile-detail-container">
                             <label className="label">Name</label> <br />
-                            <input id="name" className="input-text" type="text" placeholder="Name" />  <br />
+                            <input id="recr_name" type="text" placeholder="Name" />  <br /> <br />
 
                             <label className="label">Pronouns</label>
-                            <label className="roleTitle-label">Role/Title</label> <br />
+                            <label className="recr_roleTitle-label">Role/Title</label> <br />
                             
-                            <input id="pronouns" className="input-text" type="text" placeholder="Pronouns" />
-                            <input id="roleTitle" 
-                                  className="input-text" 
+                            <input id="recr_pronouns" type="text" placeholder="Pronouns" />
+                            <input id="recr_roleTitle" 
                                   style={{margin: "0px 14px"}} 
-                                  ype="text" placeholder="Role/Title" 
-                            />
-                            <label className="label">Program</label> <br />
-                            <input id="program" className="input-text" type="text" placeholder="Program" />  <br />
+                                  type="text" 
+                                  placeholder="Role/Title" 
+                            /> <br /> <br />
+                            <label className="label">Company name</label> <br />
+                            <input id="recr_companyName" type="text" placeholder="Company name" />  <br /> <br />
                             
-                            <input id="myprofile-save" type="button" onclick="myprofile_save()" value="Save" />
+                            <input id="recr_myprofile-save" type="button" onclick="myprofile_save()" value="Save" />
 
                         </div>
                   </div>
                 </form>
             </div>
 
-            <div className="rightcolumn">
-                  <div className="card">
+            <div className="recr_rightcolumn">
+                  <div className="recr_card">
                     <div className="cardTitle-favourites">Favourites</div>
 
                       <div className="table-container">
@@ -75,7 +76,7 @@ const RecrProfilePage = () => {
                                     <td>
                                       <div className="fav_image-wrapper">   
                                           <div className="fav_img-container">
-                                             <img className="profilePhoto" src={ recr_ProfilePhoto } alt="profilePhoto"/>  
+                                             <img className="recr_profilePhoto" src={ recr_ProfilePhoto } alt="profilePhoto"/>  
                                           </div>   
                                           <div className="fav_text-container">Name</div>
                                       </div>
@@ -90,52 +91,7 @@ const RecrProfilePage = () => {
                                     <td>
                                       <div className="fav_image-wrapper">   
                                           <div className="fav_img-container">
-                                             <img className="profilePhoto" src={ recr_ProfilePhoto } alt="profilePhoto"/>  
-                                          </div>   
-                                          <div className="fav_text-container">Name</div>
-                                      </div>
-                                    </td>
-                                    <td>Program    Role/Title</td>
-                                    <td>City        Province</td>
-                                    <td>
-                                      <button className="viewComments">View Comments</button>
-                                    </td>
-                                </tr>       
-                                <tr className="tr1">
-                                    <td>
-                                      <div className="fav_image-wrapper">   
-                                          <div className="fav_img-container">
-                                             <img className="profilePhoto" src={ recr_ProfilePhoto } alt="profilePhoto"/>  
-                                          </div>   
-                                          <div className="fav_text-container">Name</div>
-                                      </div>
-                                    </td>
-                                    <td>Program    Role/Title</td>
-                                    <td>City        Province</td>
-                                    <td>
-                                      <button className="viewComments">View Comments</button>
-                                    </td>
-                                </tr>      
-                                <tr className="tr1">
-                                    <td>
-                                      <div className="fav_image-wrapper">   
-                                          <div className="fav_img-container">
-                                             <img className="profilePhoto" src={ recr_ProfilePhoto } alt="profilePhoto"/>  
-                                          </div>   
-                                          <div className="fav_text-container">Name</div>
-                                      </div>
-                                    </td>
-                                    <td>Program    Role/Title</td>
-                                    <td>City        Province</td>
-                                    <td>
-                                      <button className="viewComments">View Comments</button>
-                                    </td>
-                                </tr>                                                                    
-                                <tr className="tr1">
-                                    <td>
-                                      <div className="fav_image-wrapper">   
-                                          <div className="fav_img-container">
-                                             <img className="profilePhoto" src={ recr_ProfilePhoto } alt="profilePhoto"/>  
+                                             <img className="recr_profilePhoto" src={ recr_ProfilePhoto } alt="profilePhoto"/>  
                                           </div>   
                                           <div className="fav_text-container">Name</div>
                                       </div>
@@ -146,7 +102,51 @@ const RecrProfilePage = () => {
                                       <button className="viewComments">View Comments</button>
                                     </td>
                                 </tr>
-  
+                                <tr className="tr1">
+                                    <td>
+                                      <div className="fav_image-wrapper">   
+                                          <div className="fav_img-container">
+                                             <img className="recr_profilePhoto" src={ recr_ProfilePhoto } alt="profilePhoto"/>  
+                                          </div>   
+                                          <div className="fav_text-container">Name</div>
+                                      </div>
+                                    </td>
+                                    <td>Program    Role/Title</td>
+                                    <td>City        Province</td>
+                                    <td>
+                                      <button className="viewComments">View Comments</button>
+                                    </td>
+                                </tr>
+                                <tr className="tr1">
+                                    <td>
+                                      <div className="fav_image-wrapper">   
+                                          <div className="fav_img-container">
+                                             <img className="recr_profilePhoto" src={ recr_ProfilePhoto } alt="profilePhoto"/>  
+                                          </div>   
+                                          <div className="fav_text-container">Name</div>
+                                      </div>
+                                    </td>
+                                    <td>Program    Role/Title</td>
+                                    <td>City        Province</td>
+                                    <td>
+                                      <button className="viewComments">View Comments</button>
+                                    </td>
+                                </tr>
+                                <tr className="tr1">
+                                    <td>
+                                      <div className="fav_image-wrapper">   
+                                          <div className="fav_img-container">
+                                             <img className="recr_profilePhoto" src={ recr_ProfilePhoto } alt="profilePhoto"/>  
+                                          </div>   
+                                          <div className="fav_text-container">Name</div>
+                                      </div>
+                                    </td>
+                                    <td>Program    Role/Title</td>
+                                    <td>City        Province</td>
+                                    <td>
+                                      <button className="viewComments">View Comments</button>
+                                    </td>
+                                </tr>                                                                
                             </tbody>
                         </table>
 
