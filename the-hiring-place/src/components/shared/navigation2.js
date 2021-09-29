@@ -10,9 +10,9 @@ import {
 } from "reactstrap";
 import "../../css/navigation.css";
 import { NavLink as RouteLink } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Logo from "../shared/logo"
 import LogoutButton from "./logoutButton";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Navigation2 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +29,7 @@ const Navigation2 = () => {
         <NavbarBrand
           href="/"
           className="header-yoh"
-          style={{ display: "flex", alignItems: "center" }}
+          style={{ display: "flex", alignItems: "center", paddingBottom: "" }}
         >
           <Logo />
           YOH!

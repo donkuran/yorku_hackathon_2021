@@ -2,6 +2,7 @@ import React from "react";
 import "../../css/footer.css";
 import logo from "../../images/honeycomb.svg";
 import "../../css/logo.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Logo = (props) => {
   return (

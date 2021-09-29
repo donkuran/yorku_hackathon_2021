@@ -6,6 +6,7 @@ import tooltip from '../../images/tooltip.png';
 import settings from '../../images/settings.svg';
 import profile from '../../images/profile.svg';
 import alert from '../../images/alert.svg';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 const GradProfileView = () => {

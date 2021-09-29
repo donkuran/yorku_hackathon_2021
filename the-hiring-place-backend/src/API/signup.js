@@ -6,11 +6,11 @@ import { validationCheckUsers } from "./APIHelpers/middleware";
 const router = express.Router();
 
 router.post("/", validationCheckUsers, async (req, res) => {
-  const { name, email } = req.body;
+  const { name, email, isStudent, isRecruiter } = req.body;
 
   const password = await bcrypt.hash(req.body.password, 10);
 
-  const sql = `INSERT INTO <table name> (email, password, student, recruiter) VALUES ("${email}", "${password}", "${student}", "${recruiter}");`;
+  const sql = `INSERT INTO <table name> (email, password, isStudent, isRecruiter) VALUES ("${name}", "${email}", "${password}", "${isStudent}", "${isRecruiter}");`;
 
   db.query(sql, function (error, results, fields) {
     if (error) throw error;

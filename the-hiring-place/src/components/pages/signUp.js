@@ -1,33 +1,27 @@
 import React, { useState } from "react";
-import {
-  Col,
-  Row,
-  Button,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-} from "reactstrap";
+import { Col, Row, Button, Form, FormGroup, Label, Input } from "reactstrap";
 import { NavLink, NavLink as RouteLink } from "react-router-dom";
 import GoogleLogin from "react-google-login";
 import "../../App.css";
 import "../../css/signup.css";
 import NavSignUp from "../shared/navSignUp";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [userType, setUserType] = useState("")
+  const [isStudent, setIsStudent] = useState("");
+  const [isRecruiter, setIsRecruiter] = useState("");
 
   const SignUpSubmit = async (event) => {
     event.preventDefault();
-    const response = await fetch("http://localhost:4000/signUp", {
+    const response = await fetch("http://localhost:4000/signup", {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email, password, userType }),
+      body: JSON.stringify({ email, password, isStudent, isRecruiter }),
     });
     const payload = await response.json();
     if (response.status >= 400) {
@@ -37,7 +31,8 @@ const SignUp = () => {
     }
     setEmail("");
     setPassword("");
-    setUserType("");
+    setIsStudent("");
+    setIsRecruiter("");
   };
 
   const responseGoogle = (response) => {
@@ -72,10 +67,10 @@ const SignUp = () => {
             width: "100%",
             display: "inline-block",
             textAlign: "center",
-            paddingTop:"1rem",
+            paddingTop: "1rem",
             fontFamily: "Montserrat",
             fontSize: "15px",
-            letterSpacing: "-0.015em"
+            letterSpacing: "-0.015em",
           }}
         >
           --OR--
@@ -138,8 +133,8 @@ const SignUp = () => {
                         <Input
                           type="radio"
                           name="user"
-                          value={userType}
-                          onChange={(e) => setUserType(e.target.value)}
+                          value="false"
+                          onChange={(e) => setIsStudent(e.target.value)}
                         />
                         Graduate looking for work
                       </Label>
@@ -149,8 +144,8 @@ const SignUp = () => {
                         <Input
                           type="radio"
                           name="user"
-                          value={userType}
-                          onChange={(e) => setUserType(e.target.value)}
+                          value="false"
+                          onChange={(e) => setIsRecruiter(e.target.value)}
                         />
                         Recruiter looking to hire
                       </Label>
@@ -159,7 +154,11 @@ const SignUp = () => {
                 </Row>
               </FormGroup>
             </div>
-            <Button id="signUp" type="submit" style={{color: "#ffffff", marginLeft: "11rem"}}>Sign Up</Button>
+            <Row style={{ alignItems: "center" }}>
+              <Button id="signUp" type="submit" style={{ color: "#ffffff" }}>
+                Sign Up
+              </Button>
+            </Row>
           </Form>
           <p
             style={{
@@ -177,12 +176,12 @@ const SignUp = () => {
               privacy policy.
             </a>
           </p>
-          <a id="haveAccount" href="#" style={{ marginLeft: "10rem" }}>
-            Have an account?
-          </a>
-          <NavLink id="signIn" tag={RouteLink} to="/signIn">
-            Sign In
-          </NavLink>
+            <a id="haveAccount" style={{ marginLeft: "5rem" }} href="#">
+              Have an account?
+            </a>
+            <NavLink id="signIn" tag={RouteLink} to="/signIn" style={{}}>
+              Sign In
+            </NavLink>
           <br />
           <br />
         </div>
