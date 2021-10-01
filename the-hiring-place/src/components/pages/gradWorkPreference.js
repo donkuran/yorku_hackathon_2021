@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, NavLink, Form, Row, Col, Button } from "reactstrap";
+import { Container, Form, Row, Col, Button } from "reactstrap";
 import { NavLink as RouteLink } from "react-router-dom";
 import "../../css/gradWorkPreference.css";
 import Navigation2 from "../shared/navigation2";
@@ -7,33 +7,25 @@ import GradProfileNav from "../shared/gradProfileNav";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const GradWorkPreference = () => {
-  const [description, setDescription] = useState("");
-  const [interestQ1, setInterestQ1] = useState("");
-  const [interestR1, setInterestR1] = useState("");
-  const [interestQ2, setInterestQ2] = useState("");
-  const [interestR2, setInterestR2] = useState("");
-  const [interestQ3, setInterestQ3] = useState("");
-  const [interestR3, setInterestR3] = useState("");
-  const [notImportant, setNotImportant] = useState("");
-  const [veryImportant, setVeryImportant] = useState("");
-  const [industry, setIndustry] = useState("");
   const [internship, setInternship] = useState("");
   const [contract, setContract] = useState("");
   const [fullTime, setFullTime] = useState("");
   const [partTime, setPartTime] = useState("");
-  const [companySizeSmall, setCompanySizeSmall] = useState("");
-  const [companySizeMid, setCompanySizeMid] = useState("");
-  const [companySizeLarge, setCompanySizeLarge] = useState("");
-  const [companySizeVeryLarge, setCompanySizeVeryLarge] = useState("");
+  const [pref_location, setPrefLocation] = useState("");
+  const [open_to_remote, setOpenToRemote] = useState("");
+  const [not_important, setNotImportant] = useState("");
+  const [very_important, setVeryImportant] = useState("");
   const [salary, setSalary] = useState("");
-  const [prefLocation, setPrefLocation] = useState("");
-  const [openToRemote, setOpenToRemote] = useState("");
-  const [nextRole1, setNextRole1] = useState("");
-  const [nextRole2, setNextRole2] = useState("");
-  const [nextRole3, setNextRole3] = useState("");
-  const [nextRole4, setNextRole4] = useState("");
-  const [nextRole5, setNextRole5] = useState("");
-  const [nextRole6, setNextRole6] = useState("");
+  const [next_role1, setNextRole1] = useState("");
+  const [next_role2, setNextRole2] = useState("");
+  const [next_role3, setNextRole3] = useState("");
+  const [next_role4, setNextRole4] = useState("");
+  const [next_role5, setNextRole5] = useState("");
+  const [next_role6, setNextRole6] = useState("");
+  const [company_small, setCompanySizeSmall] = useState("");
+  const [company_mid, setCompanySizeMid] = useState("");
+  const [company_large, setCompanySizeLarge] = useState("");
+  const [company_very_large, setCompanySizeVeryLarge] = useState("");
 
   const gradWorkPreferencesSubmit = async (event) => {
     event.preventDefault();
@@ -46,33 +38,25 @@ const GradWorkPreference = () => {
         Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
-        description,
-        interestQ1,
-        interestR1,
-        interestQ2,
-        interestR2,
-        interestQ3,
-        interestR3,
-        notImportant,
-        veryImportant,
-        industry,
         internship,
         contract,
         fullTime,
         partTime,
-        companySizeSmall,
-        companySizeMid,
-        companySizeLarge,
-        companySizeVeryLarge,
+        pref_location,
+        open_to_remote,
+        not_important,
+        very_important,
         salary,
-        prefLocation,
-        openToRemote,
-        nextRole1,
-        nextRole2,
-        nextRole3,
-        nextRole4,
-        nextRole5,
-        nextRole6,
+        next_role1,
+        next_role2,
+        next_role3,
+        next_role4,
+        next_role5,
+        next_role6,
+        company_small,
+        company_mid,
+        company_large,
+        company_very_large,
       }),
     });
     const payload = await response.json();
@@ -81,16 +65,8 @@ const GradWorkPreference = () => {
     } else {
       alert(payload);
     }
-    setDescription("");
-    setInterestQ1("");
-    setInterestR1("");
-    setInterestQ2("");
-    setInterestR2("");
-    setInterestQ3("");
-    setInterestR3("");
     setNotImportant("");
     setVeryImportant("");
-    setIndustry("");
     setInternship("");
     setContract("");
     setFullTime("");
@@ -177,7 +153,7 @@ const GradWorkPreference = () => {
                           type="text"
                           placeholder="City"
                           required
-                          value={prefLocation}
+                          value={pref_location}
                           onChange={(e) => setPrefLocation(e.target.value)}
                         />
                       </Col>

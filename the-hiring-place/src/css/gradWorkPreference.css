@@ -32,7 +32,7 @@ html {
 
 .cardTitle {
   /* position: relative; */
-  font-family: Montserrat;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 15px;
@@ -50,7 +50,7 @@ html {
   float: left;
   width: 75%;
   height: auto;
-  font-family: Montserrat;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 15px;
@@ -93,7 +93,7 @@ html {
 }
 
 #jobPreference-description {
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -109,7 +109,7 @@ html {
 }
 
 .drop-down {
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -176,7 +176,7 @@ html {
   border-radius: 6px;
   border: hidden;
 
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -193,7 +193,7 @@ html {
   margin-left: 1%;
   width: 100%;
 
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -228,7 +228,7 @@ section {
   background: #3AC2EF;
   border-radius: 6px;
 
-  font-family: Montserrat;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 15px;
@@ -249,7 +249,7 @@ section {
 
 
 section p {
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 26px;
@@ -261,7 +261,7 @@ section p {
 }
 
 #workPreference2 {
-  font-family: Montserrat;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -272,7 +272,7 @@ section p {
 }
 
  #profile2 {
-   font-family: Montserrat;
+   font-family: sans-serif;
    font-style: normal;
    font-weight: bold;
    font-size: 24px;

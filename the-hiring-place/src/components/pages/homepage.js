@@ -76,7 +76,7 @@ const Homepage = () => {
                 <b>YORK OPPORTUNITY HUB</b>
               </p>
               <Row>
-                <p style={{ fontSize: "15.45px" }}>
+                <p style={{ fontSize: "" }}>
                   The York Opportunity Hub is a new database for York University
                   <br />
                   Graduates to showcase their work, skills and experience,

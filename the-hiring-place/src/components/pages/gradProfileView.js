@@ -3,9 +3,6 @@ import { Row, Col, Button, Container, FormGroup } from "reactstrap";
 import '../../css/gradProfileView.css';
 import profilePhoto from '../../images/profile2.png';
 import tooltip from '../../images/tooltip.png';
-import settings from '../../images/settings.svg';
-import profile from '../../images/profile.svg';
-import alert from '../../images/alert.svg';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 

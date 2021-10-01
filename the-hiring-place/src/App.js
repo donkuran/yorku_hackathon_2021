@@ -32,7 +32,10 @@ function App() {
         <Route path="/gradInterests" component={GradInterests} />
         <Route path="/gradEducation" component={gradEducation} />
         <Route path="/gradSkills" component={gradSkills} />
+        {/* Route For Dev */}
         <Route path="/gradProfilePage" component={GradProfilePage} />
+        {/* Route For Dev */}
+        <Route path="/recrProfilePage" component={RecrProfilePage} />
         <Route path="/settingsPage" component={Settings} />
         <Route exact path="/" component={Homepage} />
         <PrivateRoute path="/submissions">
@@ -42,7 +45,7 @@ function App() {
         <Route path="/signIn" component={SignIn} />
         <Route path="/signUp" component={SignUp} />
       </Switch>
-      <Footer year={new Date().getFullYear()}/>
+      <Footer year={new Date().getFullYear()} />
     </BrowserRouter>
   );
 }

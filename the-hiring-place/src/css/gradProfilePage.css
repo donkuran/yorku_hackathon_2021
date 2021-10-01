@@ -15,7 +15,7 @@ html {
 }
 
 .header-yoh {
-  font-family: Montserrat;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -30,7 +30,7 @@ html {
   border: 1.5px solid #3AC2EF;
   box-sizing: border-box;
   border-radius: 6px;
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 15px;
@@ -81,9 +81,8 @@ html {
 }
 
 #profile {
-  font-family: Montserrat;
+  font-family: sans-serif;
   font-style: normal;
-  font-weight: bold;
   font-size: 24px;
   line-height: 36px;
   letter-spacing: -0.015em;
@@ -91,14 +90,14 @@ html {
 }
 
 #workPreference {
-  font-family: Montserrat;
+  font-family: sans-serif;
   font-style: normal;
-  font-weight: bold;
   font-size: 24px;
   line-height: 36px;
   letter-spacing: -0.015em;
   color: #B7AEA9;
 }
+
 
 #save,
 #edit,
@@ -109,7 +108,7 @@ html {
   background: #3AC2EF;
   border: hidden;
   border-radius: 6px;
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 15px;
@@ -155,7 +154,7 @@ html {
 
 .cardTitle {
   position: relative;
-  font-family: Montserrat;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 15px;
@@ -175,7 +174,7 @@ html {
   border-style: none;
   box-sizing: border-box;
   border-radius: 6.96804px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 17.4201px;
@@ -194,7 +193,7 @@ html {
 
 /* input fields labels */
 label {
-  font-family: Montserrat;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
@@ -244,7 +243,7 @@ label {
   border-width: 1px;
   font-size: 15px;
   font-style: normal;
-  font-family: Lato;
+  font-family: sans-serif;
   letter-spacing: -1.5%;
 }
 
@@ -275,7 +274,7 @@ label {
   border-width: 1px;
   font-size: 15px;
   font-style: normal;
-  font-family: Lato;
+  font-family: sans-serif;
   letter-spacing: -1.5%;
   margin-top: 10px;
   margin-bottom: 16px;
@@ -306,7 +305,7 @@ label {
   float: left;
   width: 25%;
   height: auto;
-  font-family: Montserrat;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 15px;
@@ -350,7 +349,7 @@ label {
 }
 
 #aboutMeDescription {
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -419,12 +418,7 @@ label {
   border-radius: 6px;
   border: hidden;
 
-  font-family: 'Trebuchet MS',
-  'Lucida Sans Unicode',
-  'Lucida Grande',
-  'Lucida Sans',
-  Arial,
-  sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;

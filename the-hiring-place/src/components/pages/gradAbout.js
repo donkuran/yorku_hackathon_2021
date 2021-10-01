@@ -8,25 +8,7 @@ import ReactTooltip from "react-tooltip";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const GradAbout = () => {
-  const [name, setName] = useState("");
-  const [pronouns, setPronouns] = useState("");
-  const [role, setRole] = useState("");
-  const [program, setProgram] = useState("");
-  const [gradYear, setGradYear] = useState("");
-  const [location, setLocation] = useState("");
-  const [country, setCountry] = useState("");
-  const [link1, setLink1] = useState("");
-  const [link2, setLink2] = useState("");
-  const [link3, setLink3] = useState("");
-  const [link4, setLink4] = useState("");
-  const [link5, setLink5] = useState("");
-  const [aboutMe, setAboutMe] = useState("");
-  const [education, setEducation] = useState("");
-  const [startDate, setStartDate] = useState("");
-  const [endDate, setEndDate] = useState("");
-  const [techSkills, setTechSkills] = useState("");
-  const [personalSkills, setPersonalSkills] = useState("");
-  const [languages, setLanguages] = useState("");
+  const [about_me, setAboutMe] = useState("");
   const [description, setDescription] = useState("");
 
   const gradProfileSubmit = async (event) => {
@@ -40,25 +22,7 @@ const GradAbout = () => {
         Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
-        name,
-        pronouns,
-        role,
-        program,
-        gradYear,
-        location,
-        country,
-        link1,
-        link2,
-        link3,
-        link4,
-        link5,
-        aboutMe,
-        education,
-        startDate,
-        endDate,
-        techSkills,
-        personalSkills,
-        languages,
+        about_me,
         description,
       }),
     });
@@ -68,26 +32,8 @@ const GradAbout = () => {
     } else {
       alert(payload);
     }
-    setName("");
-    setPronouns("");
-    setRole("");
-    setProgram("");
-    setGradYear("");
-    setLocation("");
-    setCountry("");
-    setLink1("");
-    setLink2("");
-    setLink3("");
-    setLink4("");
-    setLink5("");
     setAboutMe("");
-    setAboutMe("");
-    setEducation("");
-    setStartDate("");
-    setEndDate("");
-    setTechSkills("");
-    setPersonalSkills("");
-    setLanguages("");
+    setDescription("");
   };
 
   return (
@@ -121,7 +67,7 @@ const GradAbout = () => {
                     type="text"
                     placeholder="Description"
                     required
-                    value={aboutMe}
+                    value={about_me}
                     onChange={(e) => setAboutMe(e.target.value)}
                   />
                 </div>

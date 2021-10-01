@@ -80,7 +80,7 @@ const SignIn = () => {
           className="loginGoogle-container"
           color="none"
           style={{
-            fontFamily: "Montserrat",
+            fontFamily: "sans-serif",
             fontWeight: "bold",
             borderColor: "#3AC2EF",
             color: "#3AC2EF",
@@ -92,16 +92,17 @@ const SignIn = () => {
           cookiePolicy={"single_host_origin"}
         >
           Login with Google
-        </GoogleLogin> <br />
+        </GoogleLogin>{" "}
+        <br />
         <span
           style={{
             width: "100%",
             display: "inline-block",
             textAlign: "center",
-            paddingTop:"1rem",
-            fontFamily: "Montserrat",
+            paddingTop: "1rem",
+            fontFamily: "sans-serif",
             fontSize: "15px",
-            letterSpacing: "-0.015em"
+            letterSpacing: "-0.015em",
           }}
         >
           --OR--
@@ -129,7 +130,13 @@ const SignIn = () => {
           </div>
           <Row>
             <Col sm={6} style={{ marginLeft: "2.6rem" }}>
-              <Button id="login" type="submit" style={{ width: "8rem" }}>
+              <Button
+                id="login"
+                type="submit"
+                style={{ width: "8rem" }}
+                tag={RouteLink}
+                to="/gradProfilePage"
+              >
                 Login
               </Button>
             </Col>
@@ -141,7 +148,7 @@ const SignIn = () => {
           </Row>{" "}
           <br /> <br />
         </Form>
-        <Row> 
+        <Row>
           <Col style={{ marginLeft: "3.5rem" }}>
             <p id="needAccount">Need an account?</p>
           </Col>
