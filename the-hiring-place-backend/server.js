@@ -4,7 +4,6 @@ import login from "./src/API/authentication";
 import message from "./src/API/message";
 import signup from "./src/API/signup";
 import createProfile from "./src/API/createProfile";
-import maintainProfile from "./src/API/maintainProfile";
 import { jwtVerify } from "./src/API/APIHelpers/middleware";
 const cookieParser = require("cookie-parser");
 
@@ -12,7 +11,7 @@ const app = express();
 const PORT = process.env.ENV_PORT || 3000;
 
 var corsOptions = {
-  origin: "http://my-profile.don-kur.me",
+  origin: "*",
   optionsSuccessStatus: 200,
 };
 
@@ -28,9 +27,9 @@ app.get("/api/ping", (req, res) => {
 });
 
 app.use("/auth", login);
-app.use("/message", message);
-app.use("/createProfile", jwtVerify, createProfile);
-app.use("/maintainProfile", maintainProfile);
+app.use("/contact", message);
+app.use("/gradProfilePage", jwtVerify, createProfile);
+app.use("/recrProfilePage", jwtVerify, createProfile);
 app.use("/signup", signup);
 
 

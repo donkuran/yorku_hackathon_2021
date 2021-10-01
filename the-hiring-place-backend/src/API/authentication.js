@@ -23,10 +23,10 @@ const getCredentials = (req) => {
     const { error } = validateAuthForm(req.body);
     if (error) return reject(error.details[0].message);
 
-    let { login_id, password } = req.body;
+    let { email, password } = req.body;
 
     const payload = {
-      login_id,
+      email,
       password,
     };
 
@@ -42,7 +42,7 @@ const validateUser = (userCredentials, usersFullCredentials) => {
     );
 
     if (index === -1) {
-      return reject({ error: "Invalid ID or password.", status: 400 });
+      return reject({ error: "Invalid email or password.", status: 400 });
     } else {
       try {
         const validPassword = await bcrypt.compare(
@@ -51,7 +51,7 @@ const validateUser = (userCredentials, usersFullCredentials) => {
         );
 
         if (!validPassword)
-          return reject({ error: "Invalid ID or password.", status: 400 });
+          return reject({ error: "Invalid email or password.", status: 400 });
         return resolve(usersFullCredentials[index]);
       } catch (error) {
         return reject(error);
@@ -62,7 +62,7 @@ const validateUser = (userCredentials, usersFullCredentials) => {
 
 const getToken = (validUser) => {
   const payload = {
-    login_id: validUser.login_id,
+    email: validUser.email,
     isStudent: validUser.isStudent,
     isRecruiter: validUser.isRecruiter,
   };
@@ -71,11 +71,7 @@ const getToken = (validUser) => {
 
 router.post("/", async (req, res) => {
   const sql = `SELECT e.email, e.password, a.isStudent, a.isRecruiter 
-    FROM emrconn.employee e 
-    INNER JOIN emrconn.admin a 
-    ON ( e.employee_id = a.employee_id 
-      AND e.employee_id = a.employee_id 
-      AND e.employee_id = a.employee_id )`;
+    FROM `;
 
   try {
     const userCredentials = await getCredentials(req);
