@@ -48,7 +48,7 @@ const SignUp = () => {
           className="loginGoogle-container"
           color="none"
           style={{
-            fontFamily: "Montserrat",
+            fontFamily: "sans-serif",
             fontWeight: "bold",
             borderColor: "#3AC2EF",
             color: "#3AC2EF",
@@ -68,7 +68,7 @@ const SignUp = () => {
             display: "inline-block",
             textAlign: "center",
             paddingTop: "1rem",
-            fontFamily: "Montserrat",
+            fontFamily: "sans-serif",
             fontSize: "15px",
             letterSpacing: "-0.015em",
           }}

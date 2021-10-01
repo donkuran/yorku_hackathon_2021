@@ -4,7 +4,7 @@
 }
 
 .header-yoh {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
@@ -31,6 +31,23 @@
     color: #3AC2EF;
 }
 
-#profile :active{
+#profile.active{
     color: #3AC2EF;
+}
+
+.workPreference {
+    font-family: sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.015em;
+    color: #B7AEA9;
+}
+
+.workPreference.active {
+    color: #3AC2EF;
+}
+
+.isActive.active {
+    color: blue;
 }

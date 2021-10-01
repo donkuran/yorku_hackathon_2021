@@ -31,7 +31,7 @@ body, html {
 
 .cardTitle {
   /* position: relative; */
-  font-family: Montserrat;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 15px;
@@ -49,7 +49,7 @@ body, html {
   float: left;
   width: 75%;
   height: auto;
-  font-family: Montserrat;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 15px;
@@ -92,7 +92,7 @@ body, html {
 }
 
 #jobPreference-description {
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -108,7 +108,7 @@ body, html {
 }
 
 .drop-down {
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -163,7 +163,7 @@ body, html {
   margin-left: 1%;
   width: 100%;
 
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -198,7 +198,7 @@ section {
     background: #3AC2EF;
     border-radius: 6px;
 
-    font-family: Montserrat;
+    font-family: sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
@@ -219,7 +219,7 @@ section {
 
 
   section p {
-    font-family: Lato;
+    font-family: sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 26px;

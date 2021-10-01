@@ -5,7 +5,7 @@ body,
 html {
   padding: 0;
   margin: 0;
-  font-family: Tahoma;
+  font-family: sans-serif;
   overflow: auto;
 }
 
@@ -29,7 +29,7 @@ html {
   text-align: center;
   color: #686260;
   font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: sans-serif;
   letter-spacing: -0.015em;
 }
 
@@ -53,7 +53,7 @@ html {
 .signupLinkedIn-container {
   border-style: solid;
   border-width: 1px;
-  font-family: Montserrat;
+  font-family: sans-serif;
   font-weight: bold;
   font-size: 15px;
   border-color: #3AC2EF;
@@ -73,7 +73,7 @@ html {
 #signuplinkedIn {
   border-style: none;
   background-color: white;
-  font-family: Montserrat;
+  font-family: sans-serif;
   font-style: Bold;
   font-size: 15px;
   text-align: Center;
@@ -95,7 +95,7 @@ html {
   margin-left: 15%;
   font-size: 15px;
   font-style: normal;
-  font-family: Lato;
+  font-family: sans-serif;
   letter-spacing: -1.5%;
 }
 
@@ -115,7 +115,7 @@ color: #3AC2EF;
 
 #forgotPassword {
   position: relative;
-  font-family: Montserrat;
+  font-family: sans-serif;
   font-size: 14px;
   margin-left: 5%;
   color: #3AC2EF;
@@ -133,7 +133,7 @@ color: #3AC2EF;
 #haveAccount {
   position: relative;
   text-decoration: none;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: sans-serif;
   font-size: 15px;
   letter-spacing: -1.5%;
   color: black;

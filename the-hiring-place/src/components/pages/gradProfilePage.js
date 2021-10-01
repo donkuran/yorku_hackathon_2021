@@ -10,23 +10,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const GradProfilePage = () => {
   const [name, setName] = useState("");
   const [pronouns, setPronouns] = useState("");
-  const [role, setRole] = useState("");
-  const [program, setProgram] = useState("");
-  const [gradYear, setGradYear] = useState("");
+  const [user_role, setRole] = useState("");
   const [location, setLocation] = useState("");
   const [country, setCountry] = useState("");
-  const [link1, setLink1] = useState("");
-  const [link2, setLink2] = useState("");
-  const [link3, setLink3] = useState("");
-  const [link4, setLink4] = useState("");
-  const [link5, setLink5] = useState("");
-  const [aboutMe, setAboutMe] = useState("");
-  const [education, setEducation] = useState("");
-  const [startDate, setStartDate] = useState("");
-  const [endDate, setEndDate] = useState("");
-  const [techSkills, setTechSkills] = useState("");
-  const [personalSkills, setPersonalSkills] = useState("");
-  const [languages, setLanguages] = useState("");
+  const [linkedin, setLinkedIn] = useState("");
+  const [portfolio, setPortfolio] = useState("");
+  const [twitter, setTwitter] = useState("");
+  const [instagram, setInstagram] = useState("");
+  const [resume, setResume] = useState("");
+
 
   const gradProfileSubmit = async (event) => {
     event.preventDefault();
@@ -41,23 +33,14 @@ const GradProfilePage = () => {
       body: JSON.stringify({
         name,
         pronouns,
-        role,
-        program,
-        gradYear,
+        user_role,
         location,
         country,
-        link1,
-        link2,
-        link3,
-        link4,
-        link5,
-        aboutMe,
-        education,
-        startDate,
-        endDate,
-        techSkills,
-        personalSkills,
-        languages,
+        linkedin,
+        portfolio,
+        twitter,
+        instagram,
+        resume,
       }),
     });
     const payload = await response.json();
@@ -69,23 +52,13 @@ const GradProfilePage = () => {
     setName("");
     setPronouns("");
     setRole("");
-    setProgram("");
-    setGradYear("");
     setLocation("");
     setCountry("");
-    setLink1("");
-    setLink2("");
-    setLink3("");
-    setLink4("");
-    setLink5("");
-    setAboutMe("");
-    setAboutMe("");
-    setEducation("");
-    setStartDate("");
-    setEndDate("");
-    setTechSkills("");
-    setPersonalSkills("");
-    setLanguages("");
+    setLinkedIn("");
+    setPortfolio("");
+    setTwitter("");
+    setInstagram("");
+    setResume("");;
   };
 
   return (
@@ -148,7 +121,7 @@ const GradProfilePage = () => {
                       type="text"
                       placeholder="Role/Title"
                       required
-                      value={role}
+                      value={user_role}
                       onChange={(e) => setRole(e.target.value)}
                     />
                     <br />
@@ -183,36 +156,36 @@ const GradProfilePage = () => {
                 id="linkedIn"
                 type="text"
                 placeholder="LinkedIn"
-                value={link1}
-                onChange={(e) => setLink1(e.target.value)}
+                value={linkedin}
+                onChange={(e) => setLinkedIn(e.target.value)}
               />
               <input
                 id="websitePortfolio"
                 type="text"
                 placeholder="Website Or Portfolio"
-                value={link2}
-                onChange={(e) => setLink2(e.target.value)}
+                value={portfolio}
+                onChange={(e) => setPortfolio(e.target.value)}
               />
               <input
                 id="twitter"
                 type="text"
                 placeholder="Twitter"
-                value={link3}
-                onChange={(e) => setLink3(e.target.value)}
+                value={twitter}
+                onChange={(e) => setTwitter(e.target.value)}
               />
               <input
                 id="instagram"
                 type="text"
                 placeholder="Instagram"
-                value={link4}
-                onChange={(e) => setLink4(e.target.value)}
+                value={instagram}
+                onChange={(e) => setInstagram(e.target.value)}
               />
               <input
                 id="resume"
                 type="text"
                 placeholder="Resume Link"
-                value={link5}
-                onChange={(e) => setLink5(e.target.value)}
+                value={resume}
+                onChange={(e) => setResume(e.target.value)}
               />
             </div>
             <section>

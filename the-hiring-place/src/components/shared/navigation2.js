@@ -41,19 +41,19 @@ const Navigation2 = () => {
           style={{ position: "absolute", top: "0", right: "0" }}
         >
           <Nav className="d-flex align-items-center" style={{ fontSize: "" }} navbar>
-            <NavItem style={{}}>
+            <NavItem>
               <NavLink tag={RouteLink} to="/Gradnotifications">
-                <i class="far fa-bell"></i>
+                <i className="far fa-bell"></i>
               </NavLink>
             </NavItem>
-            <NavItem style={{}}>
+            <NavItem>
               <NavLink tag={RouteLink} to="/gradProfilePage">
-                <i class="far fa-user-circle"></i>
+                <i className="far fa-user-circle"></i>
               </NavLink>
             </NavItem>
-            <NavItem style={{}}>
+            <NavItem>
               <NavLink tag={RouteLink} to="/settingsPage">
-                <i class="fas fa-cog"></i>
+                <i className="fas fa-cog"></i>
               </NavLink>
             </NavItem>
             <NavItem>

@@ -17,32 +17,44 @@ const GradProfileNav = ({ style }) => {
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink id="workPreference" tag={RouteLink} to="/gradAbout">
+          <NavLink
+            className="workPreference"
+            tag={RouteLink}
+            to="/gradAbout"
+          >
             About
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink id="workPreference" tag={RouteLink} to="/gradInterests">
+          <NavLink
+            className="workPreference"
+            tag={RouteLink}
+            to="/gradInterests"
+          >
             Interests
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink id="workPreference" tag={RouteLink} to="/gradEducation">
+          <NavLink className="workPreference" tag={RouteLink} to="/gradEducation">
             Education
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink id="workPreference" tag={RouteLink} to="/gradSkills">
+          <NavLink className="workPreference" tag={RouteLink} to="/gradSkills">
             Skills
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink id="workPreference" tag={RouteLink} to="/gradWorkPreference">
+          <NavLink
+            className="workPreference"
+            tag={RouteLink}
+            to="/gradWorkPreference"
+          >
             Work Preference
           </NavLink>
         </NavItem>
       </Nav>
-      <Row style={{ paddingBottom: "px"}}>
+      <Row style={{ paddingBottom: "px" }}>
         <Col>
           <input
             id="view"
