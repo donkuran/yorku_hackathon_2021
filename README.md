@@ -4,6 +4,10 @@ First prototype is for grad: https://www.figma.com/proto/FebJoSmvq6f2p9OJTgvHHz/
 
 Second prototype is for the recruiter: https://www.figma.com/proto/FebJoSmvq6f2p9OJTgvHHz/Developer-Wireframes?page-id=273[…]2C48%2C0.03&scaling=min-zoom&starting-point-node-id=273%3A4898
 
+# Assets folder
+
+Contains design documents including full site UX design images, draft IFD and draft ERD
+
 # yorku_hackathon_2021
 
 1.  Run the following command to install dependencies:<br/>
