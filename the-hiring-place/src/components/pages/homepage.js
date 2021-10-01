@@ -93,6 +93,8 @@ const Homepage = () => {
                     color: "#ffffff",
                     backgroundColor: "#3AC2EF",
                     border: "none",
+                    width: "10rem",
+                    marginLeft: "0.6rem"
                   }}
                   tag={RouteLink}
                   to="/signUp"
