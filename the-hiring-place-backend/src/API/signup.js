@@ -5,7 +5,7 @@ import { validationCheckUsers } from "./APIHelpers/middleware";
 
 const router = express.Router();
 
-router.post("/", validationCheckUsers, async (req, res) => {
+router.post("/signup", validationCheckUsers, async (req, res) => {
   const { name, email, isStudent, isRecruiter } = req.body;
 
   const password = await bcrypt.hash(req.body.password, 10);

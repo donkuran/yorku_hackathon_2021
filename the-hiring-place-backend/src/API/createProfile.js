@@ -6,10 +6,22 @@ const router = express.Router();
 
 // Create
 
-router.post("/education", async (req, res) => {
+router.post("/gradProfilePage", async (req, res) => {
   db.query(
-    "INSERT INTO school (schoolName, schoolLink, qualification, graduationDate) VALUES (?, ?, ?, ?)",
-    [req.body.schoolName, req.body.schoolLink, req.body.qualification, req.body.graduationDate],
+    "INSERT INTO <table name> (name, pronouns, , ) VALUES (?, ?, ?, ?)",
+    [req.body.name, req.body.pronouns, , ],
+
+    function (error, results, fields) {
+      if (error) throw error;
+      return res.status(201).send(results);
+    }
+  );
+});
+
+router.post("/recrProfilePage", async (req, res) => {
+  db.query(
+    "INSERT INTO <table name> (, , , ) VALUES (?, ?, ?, ?)",
+    [req.body.name, req.body.pronouns, , ],
 
     function (error, results, fields) {
       if (error) throw error;
@@ -22,14 +34,32 @@ router.post("/education", async (req, res) => {
 // Update
 
 router.put(
-  `/education/:schoolID`,
+  `/gradProfilePage/:grad_id`,
   validateResumeUpdateEntry,
   async (req, res) => {
     console.log(req.body);
     let query = res.locals.query;
 
-    const sql = `UPDATE my_profile_app.school SET ${query.toString()} WHERE schoolID=${
-      req.params.schoolID
+    const sql = `UPDATE <table name> SET ${query.toString()} WHERE grad_id=${
+      req.params.grad_id
+    }`;
+
+    db.query(sql, function (error, results, fields) {
+      if (error) throw error;
+      return res.status(200).send(results);
+    });
+  }
+);
+
+router.put(
+  `/recrProfilePage/:recruiter_id`,
+  validateResumeUpdateEntry,
+  async (req, res) => {
+    console.log(req.body);
+    let query = res.locals.query;
+
+    const sql = `UPDATE <table name> SET ${query.toString()} WHERE recruiter_id=${
+      req.params.recruiter_id
     }`;
 
     db.query(sql, function (error, results, fields) {

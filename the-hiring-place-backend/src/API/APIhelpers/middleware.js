@@ -23,8 +23,6 @@ const validationCheckEntries = (req, res, next) => {
   const requiredEntryProps = [
     "name",
     "email",
-    "phoneNumber",
-    "subject",
     "message",
   ];
   const requestEntryProps = Object.keys(req.body);
@@ -98,7 +96,7 @@ const validationCheckUsers = async (req, res, next) => {
   };
 
   const emailExists = (email) => {
-    const sql = `SELECT email FROM my_profile_app.registeredadmin;`;
+    const sql = `SELECT email FROM <table name>;`;
     db.query(sql, function (error, results, fields) {
       if (error) throw error;
       // console.log(results);
