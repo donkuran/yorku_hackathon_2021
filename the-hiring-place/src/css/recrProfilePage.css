@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body, html {
+    background-color: white;
+    overflow: scroll;
+  }
+  
+  
+  /* Left column */
+  .recr_leftcolumn {   
+    float: left;
+    width: 50%;
+    height: auto;
+  }
+  
+  /* Right column */
+  .recr_rightcolumn {
+    float: left;
+    width: 50%;
+    padding-left: 20px;
+  }
+  
+  /* Add card */
+  .recr_card {
+    padding: 15px;
+    padding-bottom: 45px;
+    margin-top: 30px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    height: 400px;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  /* .cardTitle {
+    position: relative;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #000000;
+  } */
+  
+  /* Profile section */
+  .recr_profilePicture-container {
+    position: relative;
+    margin-top: 5%;
+    float: left;
+    width: 30%;
+    height: auto;
+  }
+  
+  .recr_profilePicture-container img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  #recr_upload, #recr_myprofile-save {
+    background: #3AC2EF;
+    border-style: none;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 18px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
+    width: 6rem;
+  }
+  
+  #recr_upload {
+    margin-left: 15%;
+  }
+  
+  #recr_myprofile-save {
+    margin-top: 6%;
+  }
+  
+  .recr_profile-detail-container {
+    position: relative;
+    float: left;
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 65%;
+    height: auto;
+  }
+  
+  /* input fields labels */
+  label {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.015em; 
+    color: #000000;  
+    margin-top: 15px;
+  }
+  
+  .recr_roleTitle-label {
+    position: absolute;
+    margin-left: 90px;
+  }
+  
+  
+  
+  /* input texts */
+  #recr_name, #recr_pronouns, #recr_roleTitle, #recr_companyName, #recr_companyNameCourse {
+    border-style: solid;
+    border-width: 1px;
+    font-size: 15px;
+    font-style: normal;
+    font-family: Lato;
+    letter-spacing: -1.5%;
+  }
+  
+  /* Full-length input text */
+  #recr_name, #recr_companyName {
+    width: 90%;
+  }
+  
+  /* Half-length input text */
+  #recr_pronouns, #recr_roleTitle {
+    width: 45%;
+  }
+  
+  
+  .recr_cardTitle-myProfile, .cardTitle-favourites {
+    position: absolute;
+    margin-top: 0%;
+    float: left;
+    width: 25%;
+    height: auto;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #000000;
+  }
+  
+  
+  
+  
+  #recr_companyNameCourse {
+    margin-top: 20px;
+  }
+  
+  
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  .table-container{
+    position: relative;
+    margin-top: 10%;
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+  }
+  
+  /* Tables starts here */
+  table{
+    position: relative;
+    width: 100%;
+    font-size: 12px;
+    white-space: nowrap;
+    /*Add this to change the color of the entire texts inside the table
+    color: lightcyan; */
+    /*border-collapse: collapse is used to remove extra spaces in between the borders */
+    border-collapse: collapse;
+    height: auto;
+  }
+  
+  
+  /* table>thead{
+    padding: 8px;
+    background-color:#A0937D;
+    color: white; 
+  } */
+  
+  
+  /* table>thead th{
+    padding: 10px 25px;
+    border: 1px solid;
+    border-color: red;
+  } */
+  
+  
+  
+  table tr{
+    /* text-align: center; */
+  }
+  
+  
+  
+  table td{
+    border-bottom: solid 3px white;
+    border-top: solid 3px white;
+    background: rgba(196, 196, 196, 0.39);
+    margin-left: 0;
+    height: 3rem;
+  }
+  
+  
+  table tr:hover, table tr:active  {
+    background-color: #D2D3C9;
+    background-color: #CDC9C3;
+    
+  }
+  
+  .fav_image-wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  .fav_img-container {
+    width: 45%;
+  }
+  
+  .fav_text-container {
+    margin-left: 5px;
+  }
+  
+  /* table>tbody> tr td .fav_text-container  {
+    border-style: solid red;
+  } */
+  
+  table>tbody> tr td img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;   /* makes the image round */
+  }
+  
+  
+  
+  .viewComments {
+    background: #3AC2EF;
+    border-style: none;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 18px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
+    width: 6rem;
+  
+  }
+  
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .recr_leftcolumn, .recr_rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
