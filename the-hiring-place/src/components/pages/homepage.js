@@ -84,7 +84,7 @@ const Homepage = () => {
                   <br />
                   allowing recruiters and employers to learn more about them as
                   <br />
-                  individuals and potential .
+                  individuals and potential.
                 </p>
               </Row>
               <Row>

@@ -21,7 +21,7 @@ const Footer = (props) => {
         <Row>
           <Col>
             <span className="copyright" style={{ marginTop: "3rem" }}>
-              &copy; Yok University School of Continuing Studies {props.year}.
+              &copy; York University School of Continuing Studies {props.year}.
               All Rights Reserved.
             </span>
           </Col>
