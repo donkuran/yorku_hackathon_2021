@@ -57,71 +57,83 @@ Contains design documents including full site UX design images, draft IFD and dr
     > Installing the dependencies highlighted in errors individually.
 
 ### DATABASE
-CREATE DATABASE IF NOT EXISTS yoh_hiring_place;
+DATABASE
+CREATE DATABASE IF NOT EXISTS team1_yoh_hiring_place_nov;
+USE team1_yoh_hiring_place_nov;
+CREATE TABLE IF NOT EXISTS contact ( contact_id INT NOT NULL AUTO_INCREMENT, contact_name VARCHAR(100), contact_email VARCHAR(100), contact_message VARCHAR(255), PRIMARY KEY (contact_id) );
+CREATE TABLE IF NOT EXISTS signup ( user_id INT NOT NULL AUTO_INCREMENT, username VARCHAR(100), user_email VARCHAR(100) NOT NULL, isStudent Boolean, isRecruiter Boolean, PRIMARY KEY (user_id) );
+CREATE TABLE IF NOT EXISTS work_preferences ( work_preference_id INT NOT NULL AUTO_INCREMENT, internship TINYINT, contract TINYINT, fulltime Boolean, parttime Boolean, PRIMARY KEY (work_preference_id) );
+CREATE TABLE IF NOT EXISTS company_size ( company_size_id INT NOT NULL AUTO_INCREMENT, company_small TINYINT, company_medium Boolean, company_large Boolean, company_very_large Boolean, PRIMARY KEY (company_size_id) );
+CREATE TABLE IF NOT EXISTS location ( location_id INT NOT NULL AUTO_INCREMENT, city_province VARCHAR(100), country VARCHAR(100), PRIMARY KEY (location_id) );
+CREATE TABLE IF NOT EXISTS country ( country_id INT NOT NULL AUTO_INCREMENT, country VARCHAR(100), PRIMARY KEY (country_id) );
+CREATE TABLE IF NOT EXISTS user_role (user_role_id INT NOT NULL AUTO_INCREMENT, user_role VARCHAR(100), PRIMARY KEY (user_role_id) );
+CREATE TABLE IF NOT EXISTS education ( education_id INT NOT NULL AUTO_INCREMENT, program VARCHAR(100), start_date DATE NOT NULL, end_date DATE NOT NULL, PRIMARY KEY (education_id) );
+CREATE TABLE IF NOT EXISTS company ( company_id INT NOT NULL AUTO_INCREMENT, company_name VARCHAR(255) NOT NULL, PRIMARY KEY (company_id) );
+CREATE TABLE IF NOT EXISTS grad_profile ( 
+grad_id INT NOT NULL AUTO_INCREMENT, 
+image BLOB, 
+pronouns VARCHAR(100), 
+linkedIn VARCHAR(100), 
+website_or_portfolio VARCHAR(100), 
+twitter VARCHAR(100), 
+instagram VARCHAR(100), 
+resume VARCHAR (255), 
+next_role_description VARCHAR(255), 
+interestQ1 VARCHAR(255), 
+responseR1 VARCHAR(255),  
+interestQ2 VARCHAR(255), 
+responseR2 VARCHAR(255),  
+interestQ3 VARCHAR(255), 
+responseR3 VARCHAR(255),  
+technical_skills VARCHAR (255), 
+personal_skills VARCHAR (255), 
+languages VARCHAR (255), 
+preferred_location VARCHAR (255), 
+open_to_remote Boolean, 
+not_important Boolean, 
+very_important Boolean, 
+salary VARCHAR(255), 
+next_role1 Boolean, 
+next_role2 Boolean, 
+next_role3 Boolean, 
+next_role4 Boolean, 
+next_role5 Boolean, 
+next_role6 Boolean, 
+user_id INT, 
+work_preference_id INT, 
+company_size_id INT, 
+location_id INT,
+country_id INT, 
+user_role_id INT, 
+education_id INT,
+PRIMARY KEY (grad_id),
+FOREIGN KEY (user_id) REFERENCES signup (user_id), 
+FOREIGN KEY (work_preference_id) REFERENCES work_preferences (work_preference_id), 
+FOREIGN KEY (company_size_id) REFERENCES company_size (company_size_id), 
+FOREIGN KEY (location_id) REFERENCES location (location_id), 
+FOREIGN KEY (country_id) REFERENCES country (country_id), 
+FOREIGN KEY (user_role_id) REFERENCES user_role (user_role_id), 
+FOREIGN KEY (education_id) REFERENCES education (education_id) ) ;
 
-USE yoh_hiring_place;
+CREATE TABLE IF NOT EXISTS recruiter_profile ( 
+recruiter_id INT NOT NULL AUTO_INCREMENT, 
+pronouns VARCHAR(100), 
+company_id INT, 
+user_id INT, 
+PRIMARY KEY (recruiter_id), 
+FOREIGN KEY (company_id) REFERENCES company (company_id), 
+FOREIGN KEY (user_id) REFERENCES signup (user_id) );
 
-CREATE TABLE IF NOT EXISTS homepage_contact ( inquiries_id INT NOT NULL AUTO_INCREMENT, name VARCHAR(100), email VARCHAR(100), message VARCHAR(255), PRIMARY KEY (inquiries_id) );
+CREATE TABLE IF NOT EXISTS notifications ( 
+notification_id INT NOT NULL AUTO_INCREMENT, 
+notification VARCHAR(255) NOT NULL, 
+recruiter_id INT, 
+grad_id INT, 
+PRIMARY KEY (notification_id), 
+FOREIGN KEY (recruiter_id) REFERENCES recruiter_profile (recruiter_id), 
+FOREIGN KEY (grad_id) REFERENCES grad_profile (grad_id) );
 
-CREATE TABLE IF NOT EXISTS title ( title_id INT NOT NULL AUTO_INCREMENT, recruiter TINYINT, grad TINYINT, PRIMARY KEY (title_id) );
 
-CREATE TABLE IF NOT EXISTS grad_signup ( grad_id INT NOT NULL AUTO_INCREMENT, title_id INT NOT NULL, password VARCHAR(50) NOT NULL, email VARCHAR(100) NOT NULL, PRIMARY KEY (grad_id), FOREIGN KEY (title_id) REFERENCES title (title_id) );
-
-CREATE TABLE IF NOT EXISTS recruiter_signup ( recruiter_id INT NOT NULL AUTO_INCREMENT, title_id INT NOT NULL, password VARCHAR(100) NOT NULL, email VARCHAR(100) NOT NULL, PRIMARY KEY (recruiter_id), FOREIGN KEY (title_id) REFERENCES title (title_id) );
-
-CREATE TABLE IF NOT EXISTS recruiter_login ( recruiter_login_id INT NOT NULL AUTO_INCREMENT, recruiter_id INT NOT NULL, password VARCHAR(50) NOT NULL, email VARCHAR(100) NOT NULL, PRIMARY KEY (recruiter_login_id), FOREIGN KEY (recruiter_id) REFERENCES recruiter_signup (recruiter_id) );
-
-CREATE TABLE IF NOT EXISTS grad_login ( grad_login_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, password VARCHAR(50) NOT NULL, email VARCHAR(100) NOT NULL, PRIMARY KEY (grad_login_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS recruiter_settings ( recruiter_settings_id INT NOT NULL AUTO_INCREMENT, recruiter_id INT NOT NULL, email VARCHAR(100) NOT NULL, password VARCHAR(50) NOT NULL, PRIMARY KEY (recruiter_settings_id), FOREIGN KEY (recruiter_id) REFERENCES recruiter_signup (recruiter_id) );
-
-CREATE TABLE IF NOT EXISTS grad_settings ( gradsettings_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, email VARCHAR(100) NOT NULL, password VARCHAR(50) NOT NULL, PRIMARY KEY (gradsettings_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS company ( company_id INT NOT NULL AUTO_INCREMENT, company VARCHAR(255) NOT NULL, PRIMARY KEY (company_id) );
-
-CREATE TABLE IF NOT EXISTS recruiter_profile ( recruiter_profile_id INT NOT NULL AUTO_INCREMENT, recruiter_id INT NOT NULL, name VARCHAR(100) NOT NULL, image VARCHAR(255) NOT NULL, pronouns VARCHAR(100) NOT NULL, company_id INT NOT NULL, PRIMARY KEY (recruiter_profile_id), FOREIGN KEY (recruiter_id) REFERENCES recruiter_signup (recruiter_id) );
-
-CREATE TABLE IF NOT EXISTS education ( education_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, start_date DATE NOT NULL, end_date DATE NOT NULL, PRIMARY KEY (education_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS notification ( notification_id INT NOT NULL AUTO_INCREMENT, recruiter_id INT, grad_id INT, created_at TIMESTAMP DEFAULT NOW(), PRIMARY KEY (notification_id), FOREIGN KEY (recruiter_id) REFERENCES recruiter_signup (recruiter_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS program ( program_id INT NOT NULL AUTO_INCREMENT, program VARCHAR(100) NOT NULL, PRIMARY KEY (program_id) );
-
-CREATE TABLE IF NOT EXISTS grad_profile ( grad_profile_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, name VARCHAR(100) NOT NULL, image VARCHAR(255) NOT NULL, pronouns VARCHAR(100), program_id INT NOT NULL, graduating_year INT NOT NULL, created_at TIMESTAMP DEFAULT NOW(), PRIMARY KEY (grad_profile_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS links ( links_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, linkedIn VARCHAR(100), website_or_portfolio VARCHAR(100), twitter VARCHAR(100), instagram VARCHAR(100), PRIMARY KEY (links_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS about ( about_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, description VARCHAR(255) NOT NULL, PRIMARY KEY (about_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS tech_skills ( tech_skills_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, html TINYINT, react TINYINT, programming TINYINT, skillsD TINYINT, skillsE TINYINT, skillsF TINYINT, skillsG TINYINT, skillsH TINYINT, add_skill VARCHAR(100), PRIMARY KEY (tech_skills_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS next_role ( next_role_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, description VARCHAR(255) NOT NULL, PRIMARY KEY (next_role_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS interests ( interests_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, accomplishment VARCHAR(255), superpower VARCHAR(255), hobbies VARCHAR(255), PRIMARY KEY (interests_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS remote_work ( remote_work_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, not_important TINYINT, very_important TINYINT, PRIMARY KEY (remote_work_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS markets ( markets_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, tech TINYINT, medicine TINYINT, medicine_b TINYINT, market_c TINYINT, market_d TINYINT, market_e TINYINT, market_f TINYINT, market_g TINYINT, add_market VARCHAR(255), PRIMARY KEY (markets_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS personal_skills ( personal_skills_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, name VARCHAR(100) NOT NULL, communication TINYINT, collaboration TINYINT, problem_solving TINYINT, teamwork TINYINT, PRIMARY KEY (personal_skills_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS positions ( positions_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, internship TINYINT, contract TINYINT, full_time TINYINT, part_time TINYINT, PRIMARY KEY (positions_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS size ( size_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, small TINYINT, medium TINYINT, large TINYINT, very_large TINYINT, PRIMARY KEY (size_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS desired_location ( desired_location_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, toronto TINYINT, mississauga TINYINT, calgary TINYINT, add_city VARCHAR(100), open_to_remote TINYINT, PRIMARY KEY (desired_location_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS salary ( salary_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, salary VARCHAR(100), PRIMARY KEY (salary_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS important_for_role ( Important_for_role_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, mentorship TINYINT, growth TINYINT, challenges TINYINT, voice TINYINT, ongoing_learning TINYINT, growth_company TINYINT, PRIMARY KEY (important_for_role_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS languages ( language_id INT NOT NULL AUTO_INCREMENT, grad_id INT NOT NULL, english TINYINT, french TINYINT, PRIMARY KEY (language_id), FOREIGN KEY (grad_id) REFERENCES grad_signup (grad_id) );
-
-CREATE TABLE IF NOT EXISTS search ( search_id INT NOT NULL AUTO_INCREMENT, recruiter_id INT NOT NULL, PRIMARY KEY (search_id), FOREIGN KEY (recruiter_id) REFERENCES recruiter_signup (recruiter_id) );
-
-CREATE TABLE IF NOT EXISTS favorites ( favorites_id INT NOT NULL AUTO_INCREMENT, recruiter_id INT NOT NULL, PRIMARY KEY (favorites_id), FOREIGN KEY (recruiter_id) REFERENCES recruiter_signup (recruiter_id) );
-
-CREATE TABLE IF NOT EXISTS comments ( comments_id INT NOT NULL AUTO_INCREMENT, favorites_id INT NOT NULL, recruiter_id INT NOT NULL, PRIMARY KEY (comments_id), FOREIGN KEY (favorites_id) REFERENCES favorites (favorites_id) );
 
 
 

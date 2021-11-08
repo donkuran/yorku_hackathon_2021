@@ -11,12 +11,19 @@ import {
 } from "reactstrap";
 import { NavLink as RouteLink } from "react-router-dom";
 import "../../css/settings.css";
+import "../../css/gradNotifications.css";
 import Navigation2 from "../shared/navigation2";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const GradNotification = () => {
+const GradNotifications = () => {
   const [notification, setNotification] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  //const [auth, setAuth] = useState(true);
   const [auth, setAuth] = useState("");
+
+    
+    
 
   const SignInSubmit = async (event) => {
     event.preventDefault();
@@ -36,18 +43,55 @@ const GradNotification = () => {
       sessionStorage.setItem("token", payload.token);
     }
     setNotification("");
+    setEmail("");
+    setPassword("");
   };
 
   return (
     <>
       <Navigation2 />
-      <Container>
-        <div>
-          
-        </div>
+      <Container className="card">
+        <div className="notificationCenter">
+         <row className="header-box">
+           <h1 className="header-text">Notification Center</h1>
+           </row> 
+           <row className="text-box">
+           <p>View recruiter connections and updates.</p>
+          </row>
+          </div>
+          <Form className="inputForm" onSubmit={SignInSubmit}>
+                <div>
+                  <input
+                    id="userName"
+                    type="email"
+                    placeholder="Email Address"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    style={{ paddingLeft: "3px", letterSpacing: "0.03rem" }}
+                  />
+                </div>
+                <div>
+                  <input
+                    id="password"
+                    type="Password"
+                    placeholder="Password"
+                    required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    style={{ paddingLeft: "3px", letterSpacing: "0.03rem" }}
+                  />
+                </div>
+         
+        
+        </Form>
+        
+           <button id="contact-notifications">See More</button>
+      
       </Container>
-    </>
+    
+      </> 
   );
-};
+  };
 
-export default GradNotification;
+export default GradNotifications;
