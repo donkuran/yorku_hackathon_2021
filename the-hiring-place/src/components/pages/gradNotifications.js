@@ -60,10 +60,10 @@ const GradNotifications = () => {
             </div>
             </div>
           <div className="frame12">
-            <div className="group69">
+            <div className="rectangle146">
               <h1></h1>
             </div>
-            <div className="group68">
+            <div className="rectangle147">
               <h1></h1>
             </div>
             </div>

@@ -59,7 +59,87 @@ html {
     background-color: white;
 }
 
-/* Container 
+.frame12 {
+  position: absolute;
+  width: 1029px;
+  height: 230px;
+  left: 200px;
+  top: 379px;
+
+  background-color: #FFFFFF;
+
+  border: 1px solid #BBBDBF;
+  box-sizing: border-box;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+    .rectangle146 {
+      position: absolute;
+      width: 1026px;
+      height: 103px;
+      left: 0px;
+      top: 12px;
+      border: none;
+      background: rgba(196, 196, 196, 0.39);
+      }
+
+      .rectangle147 {
+        position: absolute;
+        width: 1026px;
+        height: 103px;
+        left: 0px;
+        top: 116px;
+        border: none;
+        background: rgba(196, 196, 196, 0.39);
+        }
+
+        #button-seeMore {
+          position: absolute;
+           width: 200px;
+           height: 27px;
+           top: 656px;
+           left: 560px;
+            background: #3AC2EF;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 6px;
+            }
+
+/*
+#group69 {
+
+  position: absolute;
+  width: 1173px;
+  height: 103px;
+  left: 0px;
+  top: 7px;
+  border: 1px solid gray;
+  background: red;
+  }
+
+  #group68 {
+    position: absolute;
+    width: 1173px;
+    height: 103px;
+    left: 0px;
+    top: 116px;
+    border: 1px black solid;
+    }
+
+    #button-seeMore {
+      position: absolute;
+      width: 200px;
+      height: 27px;
+      top: 656px;
+      left: 550px;
+     
+      background: #3AC2EF;
+      color: #FFFFFF;
+      border-radius: 6px;
+      border: none;
+      }
+
+ Container 
 .notification-wrapper {
     margin: auto;
     width: 35%;
@@ -224,18 +304,7 @@ table>tbody> tr td img {
         border: none;
     }*/
 
-#button-seeMore {
-  position: absolute;
-  width: 200px;
-  height: 27px;
-  top: 656px;
-  left: 550px;
- 
-  background: #3AC2EF;
-  color: #FFFFFF;
-  border-radius: 6px;
-  border: none;
-  }
+
 /*
  Rectangle 2 
 .button-seeMore{
@@ -284,51 +353,22 @@ table>tbody> tr td img {
     }
     
 
-/* Frame 12 */
-.frame12 {
-    position: absolute;
-    width: 1029px;
-    height: 230px;
-    left: 200px;
-    top: 379px;
-  
-    background-color: #FFFFFF;
-  
-    border: 1px solid #BBBDBF;
-    box-sizing: border-box;
-    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
-    }
 
-/* Rectangle 146 
-.rectangle146 {
-    position: absolute;
-    width: 1026px;
-    height: 103px;
-    left: 0px;
-    top: 116px;
-    border: 1px solid black;
-    background: rgba(196, 196, 196, 0.39);
-    }
 
+
+/* Rectangle 146*/ 
+
+/*
 .container-notification {
     position: absolute;
     width: 1440px;
     height: 60px;
     left: 0px;
     top: 0px;
-    }
+    } */
 
-/* Group 69 
-#group69 {
-  z-index: -1;
-    /*position: absolute;
-    width: 1173px;
-    height: 103px;
-    left: 0px;
-    top: 7px;
-    border: 1px solid gray;
-    background: red;
-    }
+
+
 
 /* Grad Notification center 
 .container-notification {
@@ -337,18 +377,11 @@ table>tbody> tr td img {
     height: 871px;
     
     background: #F8FDFF;
-    }
+    } */
     
 
-/* Group 68 
-#group68 {
-    position: absolute;
-    width: 1173px;
-    height: 103px;
-    left: 0px;
-    top: 116px;
-    border: 1px black solid;
-    }
+
+
 
 /* Group 95 
 .Group95 {
@@ -535,15 +568,7 @@ table>tbody> tr td img {
     }
     
     /* Rectangle 2 */
-    .button-seeMore {
-      position: absolute;
-     width: 200px;
-     height: 27px;
-     top: 556px;
-     left: 620px;
-      background: #3AC2EF;
-      border-radius: 6px;
-      }
+   
     
      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
      @media screen and (max-width: 800px) {
