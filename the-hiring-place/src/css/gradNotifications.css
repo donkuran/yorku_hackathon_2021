@@ -204,22 +204,40 @@ table>tbody> tr td img {
   margin-bottom: 16px;
   font-weight: normal;
   line-height: 24px;
-}
+}*/
+/*
+ #contact {
+        background: #3AC2EF;
+        border-radius: 4.11712px;
+        border-color: none;
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 12px;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.005em;
+        color: #FFFFFF;
+        width: 8rem;
+        height: 2rem;
+        border: none;
+    }*/
 
-/* Rectangle 2 
-.button-seeMore {
+#button-seeMore {
   position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-  
-  /* YOH-DrkBlue 
+  width: 200px;
+  height: 27px;
+  top: 656px;
+  left: 550px;
+ 
   background: #3AC2EF;
+  color: #FFFFFF;
   border-radius: 6px;
+  border: none;
   }
-
-/* Rectangle 2 
+/*
+ Rectangle 2 
 .button-seeMore{
     position: absolute;
     left: 0%;
@@ -231,7 +249,7 @@ table>tbody> tr td img {
     background: #3AC2EF;
     border-radius: 6px;
     }
-
+*/
 
 
     
@@ -516,15 +534,13 @@ table>tbody> tr td img {
       line-height: 24px;
     }
     
-    /* Rectangle 2 
+    /* Rectangle 2 */
     .button-seeMore {
       position: absolute;
-      left: 0%;
-      right: 0%;
-      top: 0%;
-      bottom: 0%;
-      
-      /* YOH-DrkBlue 
+     width: 200px;
+     height: 27px;
+     top: 556px;
+     left: 620px;
       background: #3AC2EF;
       border-radius: 6px;
       }

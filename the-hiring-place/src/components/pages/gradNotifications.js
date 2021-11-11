@@ -66,8 +66,14 @@ const GradNotifications = () => {
             <div className="group68">
               <h1></h1>
             </div>
-
             </div>
+            <input
+          id="button-seeMore"
+          type="button"
+          onclick="See More()"
+          value="See More"
+          style={{ marginTop: "1rem" }}
+        />{" "} 
           </div>
 
     
