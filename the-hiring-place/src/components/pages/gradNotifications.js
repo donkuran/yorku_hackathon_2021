@@ -14,6 +14,7 @@ import "../../css/settings.css";
 import "../../css/gradNotifications.css";
 import Navigation2 from "../shared/navigation2";
 import "bootstrap/dist/css/bootstrap.min.css";
+import recruiter_ProfilePhoto from '../../images/profile2.png';
 
 const GradNotifications = () => {
   const [notification, setNotification] = useState("");
@@ -50,48 +51,30 @@ const GradNotifications = () => {
   return (
     <>
       <Navigation2 />
-      <Container className="card">
+      <Container>
         <div className="notificationCenter">
-         <row className="header-box">
-           <h1 className="header-text">Notification Center</h1>
-           </row> 
-           <row className="text-box">
-           <p>View recruiter connections and updates.</p>
-          </row>
+          <div className="header-box">
+          <div className="header-text">Notification Center</div>
+          <div className="text-box">
+            <p className="text">New recruiter connection and updates</p>
+            </div>
+            </div>
+          <div className="frame12">
+            <div className="group69">
+              <h1></h1>
+            </div>
+            <div className="group68">
+              <h1></h1>
+            </div>
+
+            </div>
           </div>
-          <Form className="inputForm" onSubmit={SignInSubmit}>
-                <div>
-                  <input
-                    id="userName"
-                    type="email"
-                    placeholder="Email Address"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    style={{ paddingLeft: "3px", letterSpacing: "0.03rem" }}
-                  />
-                </div>
-                <div>
-                  <input
-                    id="password"
-                    type="Password"
-                    placeholder="Password"
-                    required
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    style={{ paddingLeft: "3px", letterSpacing: "0.03rem" }}
-                  />
-                </div>
-         
-        
-        </Form>
-        
-           <button id="contact-notifications">See More</button>
-      
-      </Container>
+
+    
+           </Container>  
     
       </> 
   );
-  };
+};
 
 export default GradNotifications;

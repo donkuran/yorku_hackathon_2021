@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {
+background-color: #ECFCFF;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    position: relative;
+  overflow: auto;
+}
+/* Notification center */
+.notificationCenter {
+  position: static;
+  margin-top: 50px;
+  width: 1440px;
+  height: 873px;
+  /*left: 21600px;*/
+  top: 0px;
+
+  background-color: #FFFFFF;
+  border: 1px solid black;
+}
+
+.header-box {
+  position: absolute;
+    width: 400px;
+    height: 36px;
+    margin-top: 215px;
+    left: 600px;
+    background-color: white;
+}
+
+.header-text {
+  position: relative;
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+.text-box {
+  position: relative;
+    width: 321px;
+    height: 24px;
+    top: 50px;
+    background-color: white;
+}
+
+/* Container 
+.notification-wrapper {
+    margin: auto;
+    width: 35%;
+    height: auto;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.1);
+    border-style: none;
+    background-color: #EFEFEF;
+    top: 124px; 
+  }
+
+.container-notification {
+width: 800px;
+height: 600px;
+left: 9943px;
+top: -556px;
+padding-top: 50px;
+
+margin-top: 50px;
+
+
+background-color: #FFFFFF;
+border: 1px solid rgba(0, 0, 0, 0.5);
+box-sizing: border-box;
+}
+
+/* Add card 
+.card {
+    padding: 15px;
+    margin-top: 30px;
+    margin: auto;
+    width: 80%;
+    height: auto;
+    box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.1);
+    border-style: none;
+    background-color: #FFFFFF;
+  }
+  
+  .cardTitle {
+    position: relative;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #000000;
+  }
+
+  #contact-notifications {
+    background: #3AC2EF;
+    border-radius: 6px;
+    border-color: none;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10.2928px;
+    font-size: 14px;
+    line-height: 12px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
+    width: 8rem;
+    height: 2rem;
+    margin-top: 20px;
+    margin-left: 585px;
+    border: none;
+}
+
+.notifications_card {
+  padding: 15px;
+  padding-bottom: 45px;
+  margin-top: 30px;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  width: 1100px;
+  height: 400px;
+  box-sizing: border-box;
+}
+
+ .cardTitle-notifications {
+  position: absolute;
+  margin-top: 0%;
+  float: left;
+  width: 25%;
+  height: auto;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.015em;
+  color: #000000;
+}
+.table-container{
+  position: relative;
+  margin-top: 10%;
+  width: 100%;
+  height: auto;
+  background-color: gray;
+  /*overflow: scroll;
+}
+.notifications_image-wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.notifications_img-container {
+  width: 45%;
+}
+
+.notifications_text-container {
+  margin-left: 5px;
+}
+
+/* table>tbody> tr td .fav_text-container  {
+  border-style: solid red;
+} 
+
+table>tbody> tr td img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;   /* makes the image round 
+}
+
+
+
+#notificationsOne,
+#notificationsTwo,
+.dummy {
+  border-style: solid;
+  border-width: 1px;
+  font-size: 15px;
+  font-style: normal;
+  font-family: sans-serif;
+  letter-spacing: -1.5%;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+/* Rectangle 2 
+.button-seeMore {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  
+  /* YOH-DrkBlue 
+  background: #3AC2EF;
+  border-radius: 6px;
+  }
+
+/* Rectangle 2 
+.button-seeMore{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    /* YOH-DrkBlue 
+    background: #3AC2EF;
+    border-radius: 6px;
+    }
+
+
+
+    
+
+    
+    .heading-notification {
+    position: absolute;
+    width: 285px;
+    height: 36px;
+    left: 157px;
+    top: 115px;
+    }
+    
+    
+    /* Heading 
+    #heading-text {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height, or 150% 
+    letter-spacing: -0.015em;
+    
+    color: #000000;
+    }
+    
+
+/* Frame 12 
+.frame12 {
+    position: absolute;
+    width: 1029px;
+    height: 230px;
+    left: 140px;
+    top: 279px;
+  
+    background-color: #FFFFFF;
+  
+    border: 1px solid #BBBDBF;
+    box-sizing: border-box;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+/* Rectangle 146 
+.rectangle146 {
+    position: absolute;
+    width: 1026px;
+    height: 103px;
+    left: 0px;
+    top: 116px;
+    border: 1px solid black;
+    background: rgba(196, 196, 196, 0.39);
+    }
+
+.container-notification {
+    position: absolute;
+    width: 1440px;
+    height: 60px;
+    left: 0px;
+    top: 0px;
+    }
+
+/* Group 69 
+#group69 {
+  z-index: -1;
+    /*position: absolute;
+    width: 1173px;
+    height: 103px;
+    left: 0px;
+    top: 7px;
+    border: 1px solid gray;
+    background: red;
+    }
+
+/* Grad Notification center 
+.container-notification {
+    position: absolute;
+    width: 1440px;
+    height: 871px;
+    
+    background: #F8FDFF;
+    }
+    
+
+/* Group 68 
+#group68 {
+    position: absolute;
+    width: 1173px;
+    height: 103px;
+    left: 0px;
+    top: 116px;
+    border: 1px black solid;
+    }
+
+/* Group 95 
+.Group95 {
+    position: absolute;
+    width: 1173px;
+    height: 103px;
+    left: 160px;
+    top: 297px;
+    border: 1px black solid;
+    color: #FFFFFF
+    }
+
+    
+    
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+    
+    body {
+    background-color: #ECFCFF;
+    }
+    
+    body,
+    html {
+      padding: 0;
+      margin: 0;
+      font-family: sans-serif;
+        font-style: normal;
+        font-size: 15px;
+        position: relative;
+      overflow: auto;
+    }
+  
+    .header-text, h1 {
+        font-family: Montserrat;
+        font-style: normal;
+        font-size: 36px;
+        font-weight: 700;
+    }
+    
+  
+    /* Container 
+    .notification-wrapper {
+        margin: auto;
+        width: 35%;
+        height: auto;
+        border-style: solid;
+        border-width: 1px;
+        box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.1);
+        border-style: none;
+        background-color: #EFEFEF;
+        top: 124px; 
+      }
+    
+    .container-notification {
+    width: 800px;
+    height: 600px;
+    left: 9943px;
+    top: -556px;
+    padding-top: 50px;
+    
+    margin-top: 50px;
+    
+    
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    }
+    
+    /* Add card 
+    .card {
+        padding: 15px;
+        margin-top: 30px;
+        margin: auto;
+        width: 80%;
+        height: auto;
+        box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.1);
+        border-style: none;
+        background-color: yellow;
+      }
+      
+      .cardTitle {
+        position: relative;
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: -0.015em;
+        color: #000000;
+      }
+    
+      #contact-notifications {
+        background: #3AC2EF;
+        border-radius: 6px;
+        border-color: none;
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10.2928px;
+        font-size: 14px;
+        line-height: 12px;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.005em;
+        color: #FFFFFF;
+        width: 8rem;
+        height: 2rem;
+        margin-top: 20px;
+        margin-left: 585px;
+        border: none;
+    }
+    
+    .notifications_card {
+      padding: 15px;
+      padding-bottom: 45px;
+      margin-top: 30px;
+      background: orange;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      height: 400px;
+      box-sizing: border-box;
+    }
+    
+     .cardTitle-notifications {
+      position: absolute;
+      margin-top: 0%;
+      float: left;
+      width: 25%;
+      height: auto;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: -0.015em;
+      color: #000000;
+    }
+    .table-container{
+      position: relative;
+      margin-top: 10%;
+      width: 100%;
+      height: auto;
+      /*overflow: scroll;
+    }
+    .notifications_image-wrapper {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+    
+    .notifications_img-container {
+      width: 45%;
+    }
+    
+    .notifications_text-container {
+      margin-left: 5px;
+    }
+    
+    /* table>tbody> tr td .fav_text-container  {
+      border-style: solid red;
+    } 
+    
+    table>tbody> tr td img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 50%;   /* makes the image round 
+    }
+    
+    
+    
+    #notificationsOne,
+    #notificationsTwo,
+    .dummy {
+      border-style: solid;
+      border-width: 1px;
+      font-size: 15px;
+      font-style: normal;
+      font-family: sans-serif;
+      letter-spacing: -1.5%;
+      margin-top: 10px;
+      margin-bottom: 16px;
+      font-weight: normal;
+      line-height: 24px;
+    }
+    
+    /* Rectangle 2 
+    .button-seeMore {
+      position: absolute;
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+      
+      /* YOH-DrkBlue 
+      background: #3AC2EF;
+      border-radius: 6px;
+      }
+    
+     /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+     @media screen and (max-width: 800px) {
+      .recr_leftcolumn, .recr_rightcolumn {   
+        width: 100%;
+        padding: 0;
+      }
+    }
