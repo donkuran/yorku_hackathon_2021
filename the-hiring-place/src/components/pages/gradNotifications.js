@@ -60,13 +60,61 @@ const GradNotifications = () => {
             </div>
             </div>
           <div className="frame12">
+          <div className="table-container">
             <div className="rectangle146">
-              <h1></h1>
+                <table>
+                  <tbody>
+                              <tr className="recruiter1">
+                                  <td>
+                                    <div className="recruiter_image-wrapper">   
+                                        <div className="recruiter_img-container">
+                                          <img className="recruiter_profilePhoto" src={ recruiter_ProfilePhoto } alt="recruiterProfilePhoto"/>  
+                                        </div> 
+                                        </div>
+                                        </td>
+                                        <td>
+                                        <tr>
+                                        <div className="recruiter_text-container">Recruiter Name</div>
+                                        </tr>
+                                        <tr>Sent you a message to your e-mail address</tr>
+                                  </td>
+                                  <td>Timestamp  
+                                  </td>
+                              </tr>  
+                              </tbody>
+                              </table>
+                              </div>
+                              <div className="rectangle147">
+                                <table>
+                                  <tbody>
+
+                              <tr className="admin1">
+                                  <td>
+                                    <div className="admin_image-wrapper">   
+                                        <div className="admin_img-container">
+                                          <img className="recruiter_profilePhoto" src={ recruiter_ProfilePhoto } alt="recruiterProfilePhoto"/>  
+                                        </div> 
+                                        </div>
+                                        </td>
+                                        <td>
+                                        <tr>
+                                        <div className="admin_text-container">Admin Name</div>
+                                        </tr>
+                                        <tr>New Updates</tr>
+                                  </td>
+                                  <td>Timestamp  
+                                  </td>
+                              </tr>     
+                              </tbody>
+                              </table>
+                              </div>
+                         
+
+                             
             </div>
-            <div className="rectangle147">
-              <h1></h1>
+          
             </div>
-            </div>
+            <div>
             <input
           id="button-seeMore"
           type="button"
@@ -74,11 +122,10 @@ const GradNotifications = () => {
           value="See More"
           style={{ marginTop: "1rem" }}
         />{" "} 
-          </div>
-
-    
-           </Container>  
-    
+  </div>
+  </div>
+   </Container>  
+   
       </> 
   );
 };

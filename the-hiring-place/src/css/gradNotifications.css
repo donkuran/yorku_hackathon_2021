@@ -78,7 +78,7 @@ html {
       width: 1026px;
       height: 103px;
       left: 0px;
-      top: 12px;
+      top: -95px;
       border: none;
       background: rgba(196, 196, 196, 0.39);
       }
@@ -88,7 +88,7 @@ html {
         width: 1026px;
         height: 103px;
         left: 0px;
-        top: 116px;
+        top: 15px;
         border: none;
         background: rgba(196, 196, 196, 0.39);
         }
@@ -105,7 +105,109 @@ html {
             border-radius: 6px;
             }
 
+            #group146 {
+              width: 27px;
+              height: 43px;
+              top: 37px;
+              left: 51px;
+              font-family: Lato;
+              font-weight: 700;
+              font-style: normal;
+              font-size: 36px;
+              line-height: 43px;
+              text-align: center;
+              color: #000000;
+            }
+
+            .table-container{
+              position: relative;
+              margin-top: 10%;
+              width: 100%;
+              height: auto;
+              /*overflow: scroll;*/
+            }
+          
+            /* Tables starts here */
+            table{
+              position: relative;
+              width: 100%;
+              font-size: 16px;
+              color: #000000;
+              white-space: nowrap;
+              /*Add this to change the color of the entire texts inside the table
+              color: lightcyan; */
+              /*border-collapse: collapse is used to remove extra spaces in between the borders */
+              border-collapse: collapse;
+              height: auto;
+            }
+            
+  table tr:hover, table tr:active  {
+    background-color: #D2D3C9;
+    background-color: #CDC9C3;
+
+  }
+
+  .recruiter_image-wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .recruiter_img-container {
+    padding-left: 10%;
+    width: 45%;
+  }
+
+  .recruiter_text-container {
+    margin-left: 5px;
+  }
+
+  .admin_image-wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .admin_img-container {
+    width: 45%;
+    padding-left: 10%;
+  }
+
+  .admin_text-container {
+    margin-left: 5px;
+  }
+
+  /* table>tbody> tr td .fav_text-container  {
+    border-style: solid red;
+  } */
+
+  table>tbody> tr td img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;   /* makes the image round */
+  }
+
+
 /*
+  .viewComments {
+    background: #3AC2EF;
+    border-style: none;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 18px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
+    width: 6rem;
+
+  }
+
 #group69 {
 
   position: absolute;
@@ -318,7 +420,7 @@ table>tbody> tr td img {
     background: #3AC2EF;
     border-radius: 6px;
     }
-*/
+
 
 
     
